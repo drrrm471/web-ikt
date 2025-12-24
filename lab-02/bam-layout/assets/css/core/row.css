@@ -1,0 +1,24 @@
+.row {
+    width: calc(100% + 10px);
+    margin-left: -10px;
+    display: flex;
+}
+
+.col {
+    padding: 0 10px;
+    width: 100%;
+}
+
+.col-sticky{
+    position: sticky;
+    top: 25px;
+}
+
+@media all and (max-width: 1024px) {
+    .row{
+        flex-direction: column;
+    }
+    .col{
+        padding-right: 0;
+    }
+}

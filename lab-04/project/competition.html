@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Танцевальный дуэт | Моя семья – мой космос</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        @media print {
+            header, footer, .no-print {
+                display: none !important;
+            }
+            body {
+                background: white;
+                color: black;
+            }
+            .competition-image {
+                filter: grayscale(100%);
+            }
+            .rating, .card-meta {
+                display: none;
+            }
+            .testimonial {
+                background: white;
+                border: 1px solid #ccc;
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="media/img/logo.svg" class="logo__img" alt="Logo site">
+            </a>
+            <nav>
+                <a href="registration.html">Регистрация</a>
+                <a href="index.html#login">Авторизация</a>
+                <a href="account.html">Личный кабинет</a>
+                <a href="index.html#about">О нас</a>
+                <a href="index.html#competitions">Конкурсы</a>
+                <a href="index.html#search">Поиск</a>
+                <a href="index.html#footer">Контакты</a>
+            </nav>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙 Тема</button>
+        </div>
+    </header>
+
+    <section class="hero" style="padding: 60px 40px;">
+        <div class="container">
+            <h1 style="font-size: 48px;">Танцевальный дуэт</h1>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <img src="media/img/competition3.png" alt="Танцевальный дуэт" class="competition-image" style="width: 100%; border-radius: 12px; margin-bottom: 40px; box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2);">
+
+                <h2 style="text-align: left; margin-bottom: 30px;">Описание конкурса</h2>
+                <p style="font-size: 18px; line-height: 1.8; color: var(--color-text-light); margin-bottom: 30px;">
+                    Танцевальный дуэт – это увлекательный конкурс, на котором семейные пары или малые группы исполняют танцевальные номера. Конкурс приветствует танцы любых стилей: от классического балета до современных направлений, от народных танцев до hip-hop.
+                </p>
+
+                <p style="font-size: 18px; line-height: 1.8; color: var(--color-text-light); margin-bottom: 30px;">
+                    Это прекрасная возможность показать синхронность, грацию и энергию вашей семейной пары. Длительность номера составляет от 2 до 5 минут. Жюри оценивает исполнение по критериям: синхронизация, техника, оригинальность и эмоциональность.
+                </p>
+
+                <p style="font-size: 18px; line-height: 1.8; color: var(--color-text-light); margin-bottom: 40px;">
+                    Победители конкурса получат награды и сертификаты участия. Участие в "Танцевальном дуэте" – это возможность укрепить семейные связи, раскрыть творческий потенциал и получить незабываемые впечатления.
+                </p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-bottom: 40px;">
+                    <div class="card" style="text-align: center;">
+                        <div class="card-content">
+                            <h3 style="color: var(--color-primary); font-size: 24px; margin-bottom: 10px;">⭐ 5.0/5</h3>
+                            <p style="color: var(--color-text-dark);">Средний рейтинг</p>
+                        </div>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div class="card-content">
+                            <h3 style="color: var(--color-primary); font-size: 24px; margin-bottom: 10px;">👥 412</h3>
+                            <p style="color: var(--color-text-dark);">Записалось участников</p>
+                        </div>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div class="card-content">
+                            <h3 style="color: var(--color-primary); font-size: 24px; margin-bottom: 10px;">📅 8 июля</h3>
+                            <p style="color: var(--color-text-dark);">Дата проведения</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="account.html" class="btn btn-primary no-print" style="width: 100%; text-align: center; padding: 16px;">Записаться на конкурс</a>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--color-dark-surface);" class="no-print">
+        <div class="container">
+            <h2 style="text-align: left;">Отзывы участников</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div class="testimonial">
+                    <div class="testimonial-author">
+                        <img src="media/img/author3.png" alt="Иван Смирнов" class="testimonial-avatar">
+                        <div class="testimonial-author-info">
+                            <p class="testimonial-author-name">Иван Смирнов</p>
+                            <p class="testimonial-date">8 июля 2024</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Спасибо за создание такого пространства! Наша семья выиграла в номинации "Творчество и гармония". Это был лучший опыт!</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-author">
+                        <img src="media/img/author5.png" alt="Сергей Романов" class="testimonial-avatar">
+                        <div class="testimonial-author-info">
+                            <p class="testimonial-author-name">Сергей Романов</p>
+                            <p class="testimonial-date">8 июля 2024</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Участие в этом конкурсе позволило нам раскрыть новые способности и получить массу положительных эмоций от выступления.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="no-print" style="display: none;">
+        <h3>Произвольный отзыв</h3>
+        <p>Участие в конкурсе "Танцевальный дуэт" было незабываемым опытом для нашей семьи. Мы смогли показать свои таланты и получить поддержку от других участников и зрителей. Спасибо организаторам за профессионализм и гостеприимство!</p>
+    </section>
+
+    <footer class="no-print">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p><a href="tel:+74842234567">+7 (4842) 23-45-67</a></p>
+                <p><a href="mailto:family@cosmos.ru">family@cosmos.ru</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Навигация</h4>
+                <a href="index.html">Главная</a>
+                <a href="index-light.html">Главная-светлая</a>
+                <a href="registration.html">Регистрация</a>
+                <a href="competition.html">Конкурс</a>
+                <a href="account.html">Личный кабинет</a>
+                <a href="404.html">Страница не найдена</a>
+            </div>
+            <div class="footer-section">
+                <h4>О проекте</h4>
+                <p>Мероприятие для укрепления семейных связей.</p>
+                <p style="font-size: 12px; margin-top: 20px;">© 2025 Все права защищены</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 "Моя семья – мой космос".</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-theme');
+            localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+        }
+
+        window.addEventListener('load', () => {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'light') {
+                document.body.classList.add('light-theme');
+            }
+        });
+    </script>
+</body>
+</html>

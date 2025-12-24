@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Эко-маркет - Экологически чистые товары</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Хедер -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="assets/images/logo.svg" class="logo__img" alt="Логотип Эко-маркета">
+        </div>
+        <nav>
+          <a href="search.html">Поиск</a>
+          <a href="register.html" class="nav-button">Регистрация</a>
+          <a href="login.html" class="nav-button">Личный кабинет</a>
+          <a href="add.html" class="nav-button">Добавить товар</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Слайдер с популярными товарами -->
+    <section class="slider-container">
+      <div class="slides">
+        <!-- Слайд 1 -->
+        <div class="slide">
+          <div class="slide-content">
+            <h2>Экологичная мода</h2>
+            <p>Стильные вещи из натуральных и переработанных материалов, которые не вредят планете</p>
+            <button class="slide-btn">Подробнее</button>
+          </div>
+          <div class="slide-image">
+            <img src="assets/images/product-1.png" alt="Экологичная мода">
+          </div>
+        </div>
+
+        <!-- Слайд 2 -->
+        <div class="slide">
+          <div class="slide-content">
+            <h2>Натуральные продукты</h2>
+            <p>Свежие органические продукты от местных фермеров без химических добавок</p>
+            <button class="slide-btn">Подробнее</button>
+          </div>
+          <div class="slide-image">
+            <img src="assets/images/product-2.png" alt="Натуральные продукты">
+          </div>
+        </div>
+
+        <!-- Слайд 3 -->
+        <div class="slide">
+          <div class="slide-content">
+            <h2>Уход без химии</h2>
+            <p>Безопасные средства для ухода за телом и домом, которые защищают вас и природу</p>
+            <button class="slide-btn">Подробнее</button>
+          </div>
+          <div class="slide-image">
+            <img src="assets/images/product-3.png" alt="Уход без химии">
+          </div>
+        </div>
+      </div>
+
+      <!-- Управление слайдером -->
+      <div class="slider-controls">
+        <button class="slider-dot active" data-slide="0"></button>
+        <button class="slider-dot" data-slide="1"></button>
+        <button class="slider-dot" data-slide="2"></button>
+      </div>
+    </section>
+
+    <!-- Быстрый поиск товара -->
+    <section class="search-section">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 1.5rem;">Найдите нужный товар</h2>
+        <form class="search-form">
+          <input type="text" placeholder="Введите название товара..." required>
+          <button type="submit" class="btn btn-primary">Поиск</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Факты о компании -->
+    <section class="facts-section">
+      <div class="container">
+        <div class="facts-grid">
+          <div class="fact">
+            <div class="fact-number">1000+</div>
+            <p>Экологически чистых товаров</p>
+          </div>
+          <div class="fact">
+            <div class="fact-number">5</div>
+            <p>Лет надежного опыта</p>
+          </div>
+          <div class="fact">
+            <div class="fact-number">100%</div>
+            <p>Проверки на экологичность</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Популярные товары -->
+    <section class="products-section">
+      <div class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Популярные товары</h2>
+        <div class="products-grid">
+          <!-- Товар 1 -->
+          <div class="product-card">
+            <img src="assets/images/product-4.png" alt="Органический чай" class="product-image">
+            <div class="product-body">
+              <h3 class="product-title">Органический чай</h3>
+              <p class="product-description">Натуральный зелёный чай из экологически чистых плантаций</p>
+              <div class="product-price">450 ₽</div>
+              <div class="product-footer">
+                <button class="btn btn-primary">Купить</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Товар 2 -->
+          <div class="product-card">
+            <img src="assets/images/product-5.png" alt="Хлопковая сумка" class="product-image">
+            <div class="product-body">
+              <h3 class="product-title">Хлопковая сумка</h3>
+              <p class="product-description">Переиспользуемая сумка из натурального хлопка</p>
+              <div class="product-price">890 ₽</div>
+              <div class="product-footer">
+                <button class="btn btn-primary">Купить</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Товар 3 -->
+          <div class="product-card">
+            <img src="assets/images/product-6.png" alt="Деревянная щетка" class="product-image">
+            <div class="product-body">
+              <h3 class="product-title">Деревянная щетка</h3>
+              <p class="product-description">Экологичная зубная щетка из натурального дерева и натуральной щетины</p>
+              <div class="product-price">320 ₽</div>
+              <div class="product-footer">
+                <button class="btn btn-primary">Купить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Подписка на новости -->
+    <section class="newsletter-section">
+      <div class="container newsletter-content">
+        <h2>Подпишитесь на новости</h2>
+        <p>Получайте обновления о новых экологичных товарах и специальные предложения</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Ваш email" required>
+          <button type="submit" class="btn btn-primary">Подписаться</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Футер -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>О нас</h4>
+          <p>Эко-маркет - платформа для продвижения экологически чистых товаров и здорового образа жизни.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Контакты</h4>
+          <div class="footer-contact">
+            <strong>Телефон:</strong> +7 (491) 225-00-00
+          </div>
+          <div class="footer-contact">
+            <strong>Email:</strong> <a href="mailto:info@eco-market.ru">info@eco-market.ru</a>
+          </div>
+          <div class="footer-contact">
+            <strong>Город:</strong> Ставрополь
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Навигация</h4>
+          <a href="index.html">Главная</a>
+          <a href="register.html">Регистрация</a>
+          <a href="login.html">Авторизация</a>
+          <a href="profile.html">Личный кабинет</a>
+          <a href="add.html">Добавить товар</a>
+          <a href="search.html">Поиск</a>
+        </div>
+      </div>
+      <div class="footer-divider">
+        <p>&copy; 2025 Эко-маркет. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Управление слайдером
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slider-dot');
+    const slidesContainer = document.querySelector('.slides');
+    let currentSlide = 0;
+
+    // Функция для показа слайда
+    function showSlide(n) {
+      if (n >= slides.length) currentSlide = 0;
+      if (n < 0) currentSlide = slides.length - 1;
+
+      const offset = -currentSlide * 100;
+      slidesContainer.style.transform = `translateX(${offset}%)`;
+
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[currentSlide].classList.add('active');
+    }
+
+    // Переключение слайдов по клику на точку
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+      });
+    });
+
+    // Автоматическое переключение слайдов каждые 5 секунд
+    setInterval(() => {
+      currentSlide++;
+      showSlide(currentSlide);
+    }, 5000);
+
+    // Обработка кнопок "Подробнее"
+    document.querySelectorAll('.slide-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'product.html';
+      });
+    });
+
+    // Обработка кнопок "Купить"
+    document.querySelectorAll('.btn-primary').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (btn.parentElement.classList.contains('product-footer')) {
+          e.preventDefault();
+          window.location.href = 'product.html';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

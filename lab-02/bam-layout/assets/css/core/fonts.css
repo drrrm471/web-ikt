@@ -1,0 +1,40 @@
+h1, .h1{ font-size: 75px; }
+h2, .h2{ font-size: 45px; }
+h3, .h3{ font-size: 35px; }
+h4, .h4{ font-size: 25px; }
+h5, .h5{ font-size: 20px; }
+p, i{ font-size: 18px; }
+
+h1, h2, h3, h4, h5, p{ margin-bottom: 15px; line-height: 1.5em; }
+small{ margin-bottom: 7px }
+
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+.text-uppercase{ text-transform: uppercase;}
+
+.text-muted{color: #7e7e7e;}
+.text-white{color: #fff;}
+
+@media all and (max-width: 1440px) {
+	h1, .h1{ font-size: 50px; }
+	h2, .h2{ font-size: 35px; }
+	h3, .h3{ font-size: 30px; }
+	h4, .h4{ font-size: 25px; }
+	h5, .h5{ font-size: 20px; }
+	p, i{ font-size: 16px !important; }
+}
+
+@media all and (max-width: 425px) {
+	h1, .h1{ font-size: 45px; }
+	h2, .h2{ font-size: 30px; }
+	h3, .h3{ font-size: 25px; }
+	h4, .h4{ font-size: 20px; }
+	h1, h2, h3, h4, h5, p{ margin-bottom: 7px; line-height: 1.3em; }
+	small{ margin-bottom: 5px;}
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("../../fonts/Montserrat-Regular.ttf");
+}

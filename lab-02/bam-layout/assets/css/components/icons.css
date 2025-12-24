@@ -1,0 +1,8 @@
+.icon{
+    display: block;
+}
+.icon.circle{
+    padding: 10px 17px;
+    border: solid 2px currentColor;
+    border-radius: 50%;
+}

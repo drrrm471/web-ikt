@@ -1,0 +1,47 @@
+.logo{
+    cursor: pointer;
+    display: block;
+}
+.logo img{ width: 100%; }
+
+.header{
+    padding: 25px 0;
+    background: #fff;
+}
+
+.logo--header{ width: 150px; }
+.nav--header{ margin: 20px 0 10px 0; }
+
+#menu-toggle{
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+    z-index: -100;
+}
+
+label[for=menu-toggle]{
+    display: none;
+    padding: 15px 0;
+    width: 100%;
+    background: #fcfcfc;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+label[for=menu-toggle]:hover { background: #f6f6f6; }
+#menu-toggle:checked ~ .nav--header{ max-height: 250px; }
+
+@media all and (max-width: 600px) {
+    label[for=menu-toggle] {
+        display: inline-block;
+    }
+    .nav--header{
+        transition: max-height .25s ease;
+        overflow: hidden;
+        max-height: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+}

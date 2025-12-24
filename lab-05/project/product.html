@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Товар - Эко-маркет</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Хедер -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="assets/images/logo.svg" class="logo__img" alt="Логотип Эко-маркета">
+        </div>
+        <nav>
+          <a href="search.html">Поиск</a>
+          <a href="register.html" class="nav-button">Регистрация</a>
+          <a href="login.html" class="nav-button">Вход</a>
+          <a href="index.html">На главную</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container product-page">
+      <!-- Хлебная тропа -->
+      <div style="margin-bottom: 2rem; color: var(--text-light);">
+        <a href="index.html" style="color: var(--primary-color);">Главная</a> 
+        <span>/</span>
+        <a href="search.html" style="color: var(--primary-color);">Поиск</a>
+        <span>/</span>
+        <span id="breadcrumbTitle">Хлопковая сумка</span>
+      </div>
+
+      <!-- Основной контент товара -->
+      <div class="product-detail-container">
+        <!-- Галерея изображений -->
+        <div class="product-gallery">
+          <img src="assets/images/product-5.png" alt="Товар" class="main-image" id="mainImage">
+          
+          <div class="thumbnail-gallery">
+            <img src="assets/images/product-card-1.png" alt="Фото 1" class="thumbnail active" data-full="assets/images/product-card-1.png">
+            <img src="assets/images/product-card-2.png" alt="Фото 2" class="thumbnail" data-full="assets/images/product-card-2.png">
+            <img src="assets/images/product-card-3.png" alt="Фото 3" class="thumbnail" data-full="assets/images/product-card-3.png">
+          </div>
+        </div>
+
+        <!-- Информация о товаре -->
+        <div class="product-info">
+          <h1 class="product-detail-title">Хлопковая сумка</h1>
+          
+          <div class="product-detail-price">890 ₽</div>
+
+          <div class="product-detail-description">
+            <h3 style="color: var(--text-dark); font-size: 1.1rem; margin-bottom: 1rem;">Описание товара</h3>
+            <p>Переиспользуемая сумка из натурального хлопка высшего качества. Идеальна для покупок продуктов, одежды и других товаров.</p>
+            
+            <h4 style="color: var(--text-dark); margin-top: 1.5rem; margin-bottom: 0.75rem;">Особенности:</h4>
+            <ul style="margin-left: 1.5rem; color: var(--text-light); line-height: 2;">
+              <li>100% натуральный хлопок</li>
+              <li>Прочные ручки из трёх слоёв ткани</li>
+              <li>Вместительный размер 35 x 35 см</li>
+              <li>Экологичное производство</li>
+              <li>Многоразовая и долговечная</li>
+              <li>Лёгкая в уходе и чистке</li>
+            </ul>
+          </div>
+
+          <!-- Информация о продавце -->
+          <div class="seller-info">
+            <h4>Информация о продавце</h4>
+            <div class="seller-contact">
+              <strong>Имя:</strong> Иван Петров
+            </div>
+            <div class="seller-contact">
+              <strong>Телефон:</strong> <a href="tel:+74912250000">+7 (491) 225-00-00</a>
+            </div>
+            <div class="seller-contact">
+              <strong>Email:</strong> <a href="mailto:ivan@example.com">ivan@example.com</a>
+            </div>
+            <div class="seller-contact">
+              <strong>Рейтинг:</strong> ⭐⭐⭐⭐⭐ (147 отзывов)
+            </div>
+          </div>
+
+          <!-- Кнопки действий -->
+          <div class="product-actions-group">
+            <button class="btn btn-primary" onclick="buyProduct()">
+              Купить
+            </button>
+            <button class="btn btn-outline" onclick="contactSeller()">
+              Связаться с продавцом
+            </button>
+            <button class="btn btn-secondary" onclick="addToFavorites()">
+              ♥ В избранное
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Рекомендуемые товары -->
+      <section style="margin-top: 4rem;">
+        <h2 style="margin-bottom: 2rem;">Похожие товары</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <img src="assets/images/product-4.png" alt="Товар 1" class="product-image">
+            <div class="product-body">
+              <h3 class="product-title">Органический чай</h3>
+              <p class="product-description">Натуральный зелёный чай из экологически чистых плантаций</p>
+              <div class="product-price">450 ₽</div>
+              <div class="product-footer">
+                <button class="btn btn-primary" onclick="window.location.href='product.html'">Подробнее</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="assets/images/product-6.png" alt="Товар 2" class="product-image">
+            <div class="product-body">
+              <h3 class="product-title">Деревянная щетка</h3>
+              <p class="product-description">Экологичная зубная щетка из натурального дерева и натуральной щетины</p>
+              <div class="product-price">320 ₽</div>
+              <div class="product-footer">
+                <button class="btn btn-primary" onclick="window.location.href='product.html'">Подробнее</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="assets/images/product-5.png" alt="Товар 3" class="product-image">
+            <div class="product-body">
+              <h3 class="product-title">Натуральное мыло</h3>
+              <p class="product-description">Мыло ручного производства без синтетических компонентов</p>
+              <div class="product-price">450 ₽</div>
+              <div class="product-footer">
+                <button class="btn btn-primary" onclick="window.location.href='product.html'">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Футер -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>О нас</h4>
+          <p>Эко-маркет - платформа для продвижения экологически чистых товаров и здорового образа жизни.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Контакты</h4>
+          <div class="footer-contact">
+            <strong>Телефон:</strong> +7 (491) 225-00-00
+          </div>
+          <div class="footer-contact">
+            <strong>Email:</strong> <a href="mailto:info@eco-market.ru">info@eco-market.ru</a>
+          </div>
+          <div class="footer-contact">
+            <strong>Город:</strong> Ставрополь
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Навигация</h4>
+          <a href="index.html">Главная</a>
+          <a href="search.html">Поиск</a>
+          <a href="register.html">Регистрация</a>
+          <a href="profile.html">Личный кабинет</a>
+          <a href="add.html">Добавить товар</a>
+        </div>
+      </div>
+      <div class="footer-divider">
+        <p>&copy; 2025 Эко-маркет. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Управление галереей
+    const mainImage = document.getElementById('mainImage');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+
+    thumbnails.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const fullImage = thumb.getAttribute('data-full');
+        mainImage.src = fullImage;
+        
+        // Обновляем активный статус
+        thumbnails.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+      });
+    });
+
+    // Функция покупки
+    function buyProduct() {
+      alert('Спасибо за интерес! Функция оплаты будет реализована в будущей версии.\n\nЕсли вы хотите приобрести товар, свяжитесь с продавцом напрямую.');
+    }
+
+    // Функция связи с продавцом
+    function contactSeller() {
+      const phone = '+7 (491) 225-00-00';
+      const email = 'ivan@example.com';
+      
+      const message = 'Выберите способ связи:\n1. Позвонить: ' + phone + '\n2. Написать на email: ' + email;
+      alert(message);
+    }
+
+    // Функция добавления в избранное
+    function addToFavorites() {
+      const btn = event.target;
+      if (btn.textContent.includes('♥')) {
+        btn.textContent = '♥ В избранном';
+        btn.style.backgroundColor = '#c0392b';
+        alert('Товар добавлен в избранное!');
+      } else {
+        btn.textContent = '♥ В избранное';
+        btn.style.backgroundColor = '';
+        alert('Товар удалён из избранного!');
+      }
+    }
+  </script>
+</body>
+</html>

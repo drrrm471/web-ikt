@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя семья – мой космос | Главная (Светлая)</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="light-theme">
+    <header>
+        <div class="header-container">
+            <a href="index-light.html" class="logo">
+                <img src="media/img/logo.svg" class="logo__img" alt="Logo site">
+            </a>
+            <nav>
+                <a href="registration.html">Регистрация</a>
+                <a href="#login">Авторизация</a>
+                <a href="account.html">Личный кабинет</a>
+                <a href="#about">О нас</a>
+                <a href="#competitions">Конкурсы</a>
+                <a href="#search">Поиск</a>
+                <a href="#footer">Контакты</a>
+            </nav>
+            <button class="theme-toggle" onclick="toggleTheme()">☀️ Тема</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Добро пожаловать в космос семьи</h1>
+            <p>Объединяйте семьи, создавайте воспоминания, раскрывайте таланты</p>
+            <a href="registration.html" class="btn btn-primary">Зарегистрироваться сейчас</a>
+        </div>
+    </section>
+
+    <section class="slider">
+        <div class="container">
+            <h2 style="margin-bottom: 40px;">Популярные конкурсы</h2>
+            <div class="slider-container">
+                <div class="slider-item">
+                    <img src="media/img/competition1.png" alt="Талант рисования">
+                    <div class="slider-content">
+                        <h3>Талант рисования</h3>
+                        <p>Покажите творческие способности вашей семьи через искусство. Любые техники, любые сюжеты – главное, чтобы это было от сердца.</p>
+                        <div class="rating">
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                        </div>
+                        <div class="slider-controls">
+                            <a href="competition.html" class="btn btn-primary">Подробнее</a>
+                            <div class="slider-indicators">
+                                <div class="indicator active" onclick="moveSlider(0)"></div>
+                                <div class="indicator" onclick="moveSlider(1)"></div>
+                                <div class="indicator" onclick="moveSlider(2)"></div>
+                                <div class="indicator" onclick="moveSlider(3)"></div>
+                                <div class="indicator" onclick="moveSlider(4)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item" style="display: none;">
+                    <img src="media/img/competition2.png" alt="Семейный КВН">
+                    <div class="slider-content">
+                        <h3>Семейный КВН</h3>
+                        <p>Весёлые, острые, забавные номера от семей. Конкурс на смекалку, юмор и творческие идеи.</p>
+                        <div class="rating">
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star empty">⭐</span>
+                        </div>
+                        <div class="slider-controls">
+                            <a href="competition.html" class="btn btn-primary">Подробнее</a>
+                            <div class="slider-indicators">
+                                <div class="indicator" onclick="moveSlider(0)"></div>
+                                <div class="indicator active" onclick="moveSlider(1)"></div>
+                                <div class="indicator" onclick="moveSlider(2)"></div>
+                                <div class="indicator" onclick="moveSlider(3)"></div>
+                                <div class="indicator" onclick="moveSlider(4)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item" style="display: none;">
+                    <img src="media/img/competition3.png" alt="Танцевальный дуэт">
+                    <div class="slider-content">
+                        <h3>Танцевальный дуэт</h3>
+                        <p>Грациозные, энергичные, экспрессивные танцы в парах или группах. Любые стили и направления танца.</p>
+                        <div class="rating">
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                        </div>
+                        <div class="slider-controls">
+                            <a href="competition.html" class="btn btn-primary">Подробнее</a>
+                            <div class="slider-indicators">
+                                <div class="indicator" onclick="moveSlider(0)"></div>
+                                <div class="indicator" onclick="moveSlider(1)"></div>
+                                <div class="indicator active" onclick="moveSlider(2)"></div>
+                                <div class="indicator" onclick="moveSlider(3)"></div>
+                                <div class="indicator" onclick="moveSlider(4)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item" style="display: none;">
+                    <img src="media/img/competition4.png" alt="Поющие звёзды">
+                    <div class="slider-content">
+                        <h3>Поющие звёзды</h3>
+                        <p>Вокальные номера в исполнении семей. Соло, дуэты, хоры – все стили приветствуются.</p>
+                        <div class="rating">
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                        </div>
+                        <div class="slider-controls">
+                            <a href="competition.html" class="btn btn-primary">Подробнее</a>
+                            <div class="slider-indicators">
+                                <div class="indicator" onclick="moveSlider(0)"></div>
+                                <div class="indicator" onclick="moveSlider(1)"></div>
+                                <div class="indicator" onclick="moveSlider(2)"></div>
+                                <div class="indicator active" onclick="moveSlider(3)"></div>
+                                <div class="indicator" onclick="moveSlider(4)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item" style="display: none;">
+                    <img src="media/img/competition5.png" alt="Конкурс творческих проектов">
+                    <div class="slider-content">
+                        <h3>Конкурс творческих проектов</h3>
+                        <p>Представьте свой уникальный проект, в котором отражены ценности и интересы вашей семьи.</p>
+                        <div class="rating">
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star">⭐</span>
+                            <span class="rating-star empty">⭐</span>
+                        </div>
+                        <div class="slider-controls">
+                            <a href="competition.html" class="btn btn-primary">Подробнее</a>
+                            <div class="slider-indicators">
+                                <div class="indicator" onclick="moveSlider(0)"></div>
+                                <div class="indicator" onclick="moveSlider(1)"></div>
+                                <div class="indicator" onclick="moveSlider(2)"></div>
+                                <div class="indicator" onclick="moveSlider(3)"></div>
+                                <div class="indicator active" onclick="moveSlider(4)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="login" style="background: var(--color-dark-surface);">
+        <div class="container">
+            <h2>Авторизация</h2>
+            <div class="login-section">
+                <h3>Вход в систему</h3>
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Войти</button>
+                    <a href="#">Забыли пароль?</a>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>О нас</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                <div>
+                    <p style="line-height: 1.8; margin: 0 0 20px 0;">
+                        "Моя семья – мой космос" – это уникальное мероприятие, созданное для укрепления семейных связей и раскрытия творческого потенциала каждого члена семьи. Мы объединяем семьи со всей страны в праздничное путешествие, наполненное конкурсами, развлечениями и незабываемыми моментами.
+                    </p>
+                    <p style="line-height: 1.8; margin: 0 0 20px 0;">
+                        Наша миссия состоит в том, чтобы создать пространство, где каждый член семьи – от самого маленького до самого взрослого – чувствует себя важным и ценным. Через разнообразные конкурсы мы помогаем семьям лучше узнать друг друга, развить совместные интересы и укрепить взаимопонимание.
+                    </p>
+                    <p style="line-height: 1.8; margin: 0;">
+                        Мероприятие включает в себя различные категории конкурсов: творческие, спортивные, интеллектуальные и развлекательные. Каждая семья может выбрать те активности, которые больше всего соответствуют её интересам и способностям.
+                    </p>
+                </div>
+                <img src="media/img/about-image.png" alt="О нас" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2);">
+            </div>
+        </div>
+    </section>
+
+    <section id="competitions">
+        <div class="container">
+            <h2>Конкурсы</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <img src="media/img/competition1.png" alt="Талант рисования" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Талант рисования</h3>
+                        <p class="card-description">Покажите творческие способности вашей семьи через искусство. Любые техники, любые сюжеты.</p>
+                        <div class="card-meta">
+                            <span>📊 320 записей</span>
+                            <span>⭐ 4.9/5</span>
+                        </div>
+                        <a href="competition.html" class="btn btn-primary" style="width: 100%; text-align: center;">Записаться</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="media/img/competition2.png" alt="Семейный КВН" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Семейный КВН</h3>
+                        <p class="card-description">Весёлые, острые, забавные номера от семей. Конкурс на смекалку и юмор.</p>
+                        <div class="card-meta">
+                            <span>📊 285 записей</span>
+                            <span>⭐ 4.7/5</span>
+                        </div>
+                        <a href="competition.html" class="btn btn-primary" style="width: 100%; text-align: center;">Записаться</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="media/img/competition3.png" alt="Танцевальный дуэт" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Танцевальный дуэт</h3>
+                        <p class="card-description">Грациозные, энергичные танцы в парах. Любые стили и направления танца.</p>
+                        <div class="card-meta">
+                            <span>📊 412 записей</span>
+                            <span>⭐ 5.0/5</span>
+                        </div>
+                        <a href="competition.html" class="btn btn-primary" style="width: 100%; text-align: center;">Записаться</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="media/img/competition4.png" alt="Поющие звёзды" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Поющие звёзды</h3>
+                        <p class="card-description">Вокальные номера в исполнении семей. Соло, дуэты, хоры приветствуются.</p>
+                        <div class="card-meta">
+                            <span>📊 356 записей</span>
+                            <span>⭐ 4.8/5</span>
+                        </div>
+                        <a href="competition.html" class="btn btn-primary" style="width: 100%; text-align: center;">Записаться</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="media/img/competition5.png" alt="Конкурс творческих проектов" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Конкурс творческих проектов</h3>
+                        <p class="card-description">Представьте свой уникальный проект семьи с её ценностями и интересами.</p>
+                        <div class="card-meta">
+                            <span>📊 198 записей</span>
+                            <span>⭐ 4.6/5</span>
+                        </div>
+                        <a href="competition.html" class="btn btn-primary" style="width: 100%; text-align: center;">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="search" style="background: var(--color-dark-surface);">
+        <div class="container">
+            <h2>Поиск конкурсов</h2>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Поиск по названию или описанию..." onkeyup="searchCompetitions(this.value)">
+                <button class="btn btn-primary" style="margin-top: 20px; width: 100%;">Поиск</button>
+            </div>
+            <div id="search-results" style="margin-top: 40px;"></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Отзывы участников</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-author">
+                        <img src="media/img/author1.png" alt="Александр Петров" class="testimonial-avatar">
+                        <div class="testimonial-author-info">
+                            <p class="testimonial-author-name">Александр Петров</p>
+                            <p class="testimonial-date">8 июля 2024</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Участие в конкурсе было незабываемым опытом! Вся наша семья получила столько положительных эмоций.</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-author">
+                        <img src="media/img/author2.png" alt="Мария Сидорова" class="testimonial-avatar">
+                        <div class="testimonial-author-info">
+                            <p class="testimonial-author-name">Мария Сидорова</p>
+                            <p class="testimonial-date">8 июля 2024</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Мероприятие помогло нам ещё больше сблизиться. Конкурсы были увлекательными для всех возрастов.</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-author">
+                        <img src="media/img/author3.png" alt="Иван Смирнов" class="testimonial-avatar">
+                        <div class="testimonial-author-info">
+                            <p class="testimonial-author-name">Иван Смирнов</p>
+                            <p class="testimonial-date">8 июля 2024</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Спасибо за создание такого пространства для семей! Наша семья выиграла в номинации "Творчество".</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-author">
+                        <img src="media/img/author4.png" alt="Елена Козлова" class="testimonial-avatar">
+                        <div class="testimonial-author-info">
+                            <p class="testimonial-author-name">Елена Козлова</p>
+                            <p class="testimonial-date">8 июля 2024</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Конкурс позволил нашим детям раскрыть свои способности. Организация была на высочайшем уровне!</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-author">
+                        <img src="media/img/author5.png" alt="Сергей Романов" class="testimonial-avatar">
+                        <div class="testimonial-author-info">
+                            <p class="testimonial-author-name">Сергей Романов</p>
+                            <p class="testimonial-date">8 июля 2024</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Это было весело, остроумно и очень интересно! Все были в восторге от наших выступлений.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 60px 40px; background: linear-gradient(135deg, var(--color-dark-surface) 0%, var(--color-dark-bg) 100%);">
+        <div class="container">
+            <h2>Подпишитесь на новости</h2>
+            <form class="login-section" style="max-width: 500px; margin: 40px auto;" onsubmit="handleSubscribe(event)">
+                <div class="form-group">
+                    <label for="subscribe-email">Email:</label>
+                    <input type="email" id="subscribe-email" name="email" required placeholder="Ваш email">
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="privacy-agree" name="privacy" required>
+                    <label for="privacy-agree" style="margin: 0;">Согласен(согласна) на обработку персональных данных</label>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Подписаться</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <p><a href="tel:+74842234567">+7 (4842) 23-45-67</a></p>
+                <p><a href="mailto:family@cosmos.ru">family@cosmos.ru</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Навигация</h4>
+                <a href="index.html">Главная</a>
+                <a href="index-light.html">Главная-светлая</a>
+                <a href="registration.html">Регистрация</a>
+                <a href="competition.html">Конкурс</a>
+                <a href="account.html">Личный кабинет</a>
+                <a href="404.html">Страница не найдена</a>
+            </div>
+            <div class="footer-section">
+                <h4>О проекте</h4>
+                <p>Мероприятие для укрепления семейных связей и раскрытия творческого потенциала.</p>
+                <p style="font-size: 12px; margin-top: 20px;">© 2025 Все права защищены</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 "Моя семья – мой космос". Разработано с ❤️ для вашей семьи. -by drrrm) </p>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider-item');
+
+        function moveSlider(index) {
+            currentSlide = index;
+            slides.forEach((slide, i) => {
+                slide.style.display = i === currentSlide ? 'flex' : 'none';
+            });
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('light-theme');
+            localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+        }
+
+        function searchCompetitions(query) {
+            const competitions = [
+                { name: 'Талант рисования', desc: 'Покажите творческие способности' },
+                { name: 'Семейный КВН', desc: 'Весёлые номера от семей' },
+                { name: 'Танцевальный дуэт', desc: 'Грациозные танцы' },
+                { name: 'Поющие звёзды', desc: 'Вокальные номера' },
+                { name: 'Конкурс творческих проектов', desc: 'Уникальные проекты семей' }
+            ];
+
+            const results = competitions.filter(c => 
+                c.name.toLowerCase().includes(query.toLowerCase()) || 
+                c.desc.toLowerCase().includes(query.toLowerCase())
+            );
+
+            const resultsDiv = document.getElementById('search-results');
+            if (results.length > 0) {
+                resultsDiv.innerHTML = '<p style="text-align: center;">Найденные конкурсы: ' + results.map(r => r.name).join(', ') + '</p>';
+            } else if (query.length > 0) {
+                resultsDiv.innerHTML = '<p style="text-align: center;">Конкурсы не найдены</p>';
+            } else {
+                resultsDiv.innerHTML = '';
+            }
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            alert('Авторизация временно недоступна. Пожалуйста, зарегистрируйтесь.');
+        }
+
+        function handleSubscribe(e) {
+            e.preventDefault();
+            alert('Спасибо за подписку! Вы будете получать обновления о мероприятии.');
+            e.target.reset();
+        }
+
+        window.addEventListener('load', () => {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'light') {
+                document.body.classList.add('light-theme');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поиск товаров - Эко-маркет</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Хедер -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="assets/images/logo.svg" class="logo__img" alt="Логотип Эко-маркета">
+        </div>
+        <nav>
+          <a href="index.html">Главная</a>
+          <a href="register.html" class="nav-button">Регистрация</a>
+          <a href="login.html" class="nav-button">Вход</a>
+          <a href="add.html" class="nav-button">Добавить товар</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container search-page-container">
+      <!-- Шапка поиска -->
+      <div class="search-header">
+        <h1 style="margin-bottom: 1.5rem;">Поиск товаров</h1>
+        
+        <form id="searchForm" class="search-controls">
+          <!-- Категория -->
+          <div class="form-group">
+            <label for="category">Категория</label>
+            <select id="category" name="category">
+              <option value="">Все категории</option>
+              <option value="products">Продукты питания</option>
+              <option value="clothing">Одежда и обувь</option>
+              <option value="cosmetics">Косметика и уход</option>
+              <option value="household">Бытовая химия</option>
+              <option value="accessories">Аксессуары</option>
+              <option value="other">Прочее</option>
+            </select>
+          </div>
+
+          <!-- Поле поиска -->
+          <div class="form-group">
+            <label for="search">Название товара</label>
+            <input 
+              type="text" 
+              id="search" 
+              name="search" 
+              placeholder="Введите название товара..."
+            >
+          </div>
+
+          <!-- Кнопка поиска -->
+          <div class="form-group" style="display: flex; align-items: flex-end;">
+            <button type="submit" class="btn btn-primary">
+              Поиск
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Результаты поиска -->
+      <div class="search-results" id="searchResults">
+        <div class="results-count">Найдено товаров: <strong id="resultsCount">6</strong></div>
+
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th style="width: 80px;">Фото</th>
+              <th>Название</th>
+              <th>Описание</th>
+              <th style="width: 120px;">Цена</th>
+              <th style="width: 100px;">Действие</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody">
+          </tbody>
+        </table>
+
+        <!-- Пустое состояние (скрыто по умолчанию) -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+          <img src="assets/images/empty-state.png" alt="Нет результатов" class="empty-state-image">
+          <h3>Товары не найдены</h3>
+          <p>Попробуйте изменить параметры поиска</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Футер -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>О нас</h4>
+          <p>Эко-маркет - платформа для продвижения экологически чистых товаров и здорового образа жизни.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Контакты</h4>
+          <div class="footer-contact">
+            <strong>Телефон:</strong> +7 (491) 225-00-00
+          </div>
+          <div class="footer-contact">
+            <strong>Email:</strong> <a href="mailto:info@eco-market.ru">info@eco-market.ru</a>
+          </div>
+          <div class="footer-contact">
+            <strong>Город:</strong> Ставрополь
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Навигация</h4>
+          <a href="index.html">Главная</a>
+          <a href="register.html">Регистрация</a>
+          <a href="login.html">Вход</a>
+          <a href="profile.html">Личный кабинет</a>
+          <a href="add.html">Добавить товар</a>
+        </div>
+      </div>
+      <div class="footer-divider">
+        <p>&copy; 2025 Эко-маркет. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Данные товаров
+    const products = [
+      {
+        id: 1,
+        name: 'Органический чай',
+        category: 'products',
+        description: 'Натуральный зелёный чай из экологически чистых плантаций',
+        price: 450,
+        image: 'assets/images/product-4.png'
+      },
+      {
+        id: 2,
+        name: 'Хлопковая сумка',
+        category: 'accessories',
+        description: 'Переиспользуемая сумка из натурального хлопка',
+        price: 890,
+        image: 'assets/images/product-5.png'
+      },
+      {
+        id: 3,
+        name: 'Деревянная щетка',
+        category: 'cosmetics',
+        description: 'Экологичная зубная щетка из натурального дерева и натуральной щетины',
+        price: 320,
+        image: 'assets/images/product-6.png'
+      },
+      {
+        id: 4,
+        name: 'Натуральное мыло',
+        category: 'cosmetics',
+        description: 'Мыло ручного производства без синтетических компонентов',
+        price: 450,
+        image: 'assets/images/product-7.png'
+      },
+      {
+        id: 5,
+        name: 'Органический кофе',
+        category: 'products',
+        description: 'Кофе высшего качества от местных фермеров без химических удобрений',
+        price: 650,
+        image: 'assets/images/product-8.png'
+      },
+      {
+        id: 6,
+        name: 'Экологичная косметика',
+        category: 'cosmetics',
+        description: 'Крем для лица на основе натуральных масел и растительных экстрактов',
+        price: 1200,
+        image: 'assets/images/product-9.png'
+      }
+    ];
+
+    const searchForm = document.getElementById('searchForm');
+    const resultsBody = document.getElementById('resultsBody');
+    const resultsCount = document.getElementById('resultsCount');
+    const emptyState = document.getElementById('emptyState');
+    const searchResults = document.getElementById('searchResults');
+
+    // Функция отображения результатов
+    function displayResults(items) {
+      resultsBody.innerHTML = '';
+      
+      if (items.length === 0) {
+        resultsBody.parentElement.style.display = 'none';
+        emptyState.style.display = 'block';
+        return;
+      }
+
+      resultsBody.parentElement.style.display = 'table';
+      emptyState.style.display = 'none';
+      
+      resultsCount.textContent = items.length;
+
+      items.forEach(product => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>
+            <img src="${product.image}" alt="${product.name}" class="result-image">
+          </td>
+          <td>
+            <strong>${product.name}</strong>
+          </td>
+          <td>
+            <span class="result-description">${product.description}</span>
+          </td>
+          <td>
+            <strong style="color: var(--primary-color); font-size: 1.1rem;">${product.price} ₽</strong>
+          </td>
+          <td>
+            <button class="btn btn-primary" style="padding: 0.4rem 0.8rem; font-size: 0.9rem;" onclick="viewProduct(${product.id})">
+              Подробнее
+            </button>
+          </td>
+        `;
+        resultsBody.appendChild(row);
+      });
+    }
+
+    // Обработка поиска
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const searchText = document.getElementById('search').value.toLowerCase();
+      const category = document.getElementById('category').value;
+
+      let filtered = products.filter(product => {
+        const matchText = product.name.toLowerCase().includes(searchText) || 
+                         product.description.toLowerCase().includes(searchText);
+        const matchCategory = !category || product.category === category;
+        
+        return matchText && matchCategory;
+      });
+
+      displayResults(filtered);
+    });
+
+    // Функция просмотра товара
+    function viewProduct(id) {
+      window.location.href = 'product.html?id=' + id;
+    }
+
+    // Начальное отображение всех товаров
+    displayResults(products);
+
+    // Поиск в реальном времени
+    document.getElementById('search').addEventListener('input', () => {
+      searchForm.dispatchEvent(new Event('submit'));
+    });
+
+    document.getElementById('category').addEventListener('change', () => {
+      searchForm.dispatchEvent(new Event('submit'));
+    });
+  </script>
+</body>
+</html>

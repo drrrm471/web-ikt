@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Турист-про | Главная страница</title>
+    
+    <!-- Основные стили (пути исправлены на структуру внутри assets/) -->
+    <link rel="stylesheet" href="css/bs.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Core утилиты -->
+    <link rel="stylesheet" href="css/core/fonts.css">
+    <link rel="stylesheet" href="css/core/flex.css">
+    <link rel="stylesheet" href="css/core/size-helper.css">
+    <link rel="stylesheet" href="css/core/container.css">
+    <link rel="stylesheet" href="css/core/row.css">
+    <link rel="stylesheet" href="css/core/buttons.css">
+    <link rel="stylesheet" href="css/core/form.css"> <!-- Обратите внимание: form.css, как в вашей структуре -->
+    
+    <!-- Компоненты -->
+    <link rel="stylesheet" href="css/components/nav.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/icons.css">
+    
+    <!-- Стили для загрузчика (добавлены inline для простоты) -->
+    <style>
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        #loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Загрузчик (показывается при запуске страницы) -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+    
+    <div class="page">
+        <header class="header">
+            <div class="container d-flex align-items-center flex-column">
+                <a href="index.html" class="logo logo--header">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle">Меню</label>
+                <div class="nav nav--header">
+                    <a href="index.html#promotions" class="nav__link">Акции</a>
+                    <a href="index.html#" class="nav__link">Управление бронированием</a>
+                    <a href="index.html#search" class="nav__link">Поиск</a>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="section">
+                <div class="container">
+                    <div class="wrap" data-animation="true">
+                        <h4 class="text-uppercase text-center">Исполнить мечты просто!</h4>
+                        <h1 class="text-uppercase text-center">Турист-Про</h1>
+                        <div class="image-cover w-100">
+                            <img class="image" src="images/yosemite-national-park-918596_1920.jpg" alt="hallstatt">
+                        </div>
+                    </div>
+                    <div class="wrap wrap--reviews" data-animation="true">
+                        <div class="row">
+                            <div class="col">
+                                <h4>Главная цель компании</h4>
+                                <p>- сделать любой поход удобным, комфортным и безопасным</p>
+                            </div>
+                            <div class="col">
+                                <div class="wrap wrap--quote d-flex flex-column align-items-center">
+                                    <i class="text-muted">Lorem ipsum.</i>
+                                    <p class="mt text-center">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Animi, dignissimos distinctio ducimus, est et explicabo facere
+                                        fugit minus nesciunt repellat sed sint sit, temporibus tenetur.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section--dark">
+        <div class="container" data-animation="true">
+            <div class="row">
+                <div class="col">
+                    <div class="wrap h-100 d-flex flex-column justify-content-center">
+                        <h2 class="mb pb">Все просто</h2>
+                        <div class="booking_steps">
+                            <div class="booking_steps__item">
+                                <div class="icon circle">1</div>
+                                <img src="images/step1-icon.png" alt="Выбор дат" class="infographic-icon" style="width: 50px; height: 50px; margin: 10px 0;">
+                                <p>Выбираете даты предполагаемого похода</p>
+                            </div>
+                            <div class="booking_steps__item">
+                                <div class="icon circle">2</div>
+                                <img src="images/step2-icon.png" alt="Количество участников" class="infographic-icon" style="width: 50px; height: 50px; margin: 10px 0;">
+                                <p>Указываете количество участников и уровень их подготовки</p>
+                            </div>
+                            <div class="booking_steps__item">
+                                <div class="icon circle">3</div>
+                                <img src="images/step3-icon.png" alt="Выбор регионов" class="infographic-icon" style="width: 50px; height: 50px; margin: 10px 0;">
+                                <p>Выбираете регионы для похода</p>
+                            </div>
+                            <div class="booking_steps__item">
+                                <div class="icon circle">4</div>
+                                <img src="images/step4-icon.png" alt="Выбор мест" class="infographic-icon" style="width: 50px; height: 50px; margin: 10px 0;">
+                                <p>Выбираете места, которые хотите обязательно посетить</p>
+                            </div>
+                            <div class="booking_steps__item">
+                                <div class="icon circle">5</div>
+                                <img src="images/step5-icon.png" alt="Дополнительные услуги" class="infographic-icon" style="width: 50px; height: 50px; margin: 10px 0;">
+                                <p>Выбираете нужные дополнительные услуги</p>
+                            </div>
+                            <div class="booking_steps__item">
+                                <div class="icon circle">6</div>
+                                <img src="images/step6-icon.png" alt="Оформление заказа" class="infographic-icon" style="width: 50px; height: 50px; margin: 10px 0;">
+                                <p>И просто оформляете заказ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="image-cover">
+                        <img src="images/hiking-1149891_1920.jpg" alt="about-image" class="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container" data-animation="true">
+            <div class="row">
+                <div class="col">
+                    <div class="image-cover">
+                        <img src="images/nature-4246192_1920.jpg" alt="about-image" class="image">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="wrap wrap--search">
+                        <h2 class="mt">Найди путешествие для себя</h2>
+                        <p>Заполните форму и найдите путешествие,<br>о котором вы так мечтали</p>
+                        <form action="search.html">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form__group">
+                                        <label>Регион отдыха</label>
+                                        <select name="region" class="form__control">
+                                            <option value="0" disabled selected>Выберите регион отдыха</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form__group">
+                                        <label>С</label>
+                                        <input name="started_at" type="datetime-local" class="form__control">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form__group">
+                                        <label>До</label>
+                                        <input name="finished_at" type="datetime-local" class="form__control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form__group">
+                                        <label>Кол-во человек</label>
+                                        <input name="count" type="number" min="1" value="1" class="form__control">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form__group">
+                                        <label>Уровень подготовки</label>
+                                        <select name="level" class="form__control">
+                                            <option value="0" disabled selected>Выберите уровень подготовки людей</option>
+                                            <option value="1">Начинающие</option>
+                                            <option value="2">Средний</option>
+                                            <option value="3">Профессионалы</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn--primary mt">Найти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section--light">
+        <div class="container" data-animation="true">
+            <h2 class="text-center">Акции</h2>
+            <div class="promotion__container row">
+                <div class="col promotion__card">
+                    <div class="image-cover image--card">
+                        <img src="images/promotion-1.png" alt="promotion" class="image">
+                    </div>
+                    <div class="wrap mt">
+                        <h4 class="promotion__card__title">Lorem ipsum dolor sit amet.</h4>
+                        <p class="promotion__card__description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, rem.
+                        </p>
+                        <a class="btn btn--primary">Подробнее</a>
+                    </div>
+                </div>
+                <div class="col promotion__card">
+                    <div class="image-cover image--card">
+                        <img src="images/promotion-2.png" alt="promotion" class="image">
+                    </div>
+                    <div class="wrap mt">
+                        <h4 class="promotion__card__title">Lorem ipsum dolor sit amet.</h4>
+                        <p class="promotion__card__description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, rem.
+                        </p>
+                        <a class="btn btn--primary">Подробнее</a>
+                    </div>
+                </div>
+                <div class="col promotion__card">
+                    <div class="image-cover image--card">
+                        <img src="images/promotion-3.png" alt="promotion" class="image">
+                    </div>
+                    <div class="wrap mt">
+                        <h4 class="promotion__card__title">Lorem ipsum dolor sit amet.</h4>
+                        <p class="promotion__card__description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, rem.
+                        </p>
+                        <a class="btn btn--primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section--dark">
+        <div class="container" data-animation="true">
+            <div class="row">
+                <div class="col">
+                    <h2 class="mt">Хотите знать больше чем остальные?</h2>
+                    <p>Оставьте свою почту и получайте информацию о интересных акциях первым</p>
+                    <form action="" class="form--sub">
+                        <div class="form__group form__group--dark">
+                            <label>Email</label>
+                            <input type="email" class="form__control" placeholder="Введите свой email">
+                        </div>
+                        <button class="btn btn--light">Отправить</button>
+                    </form>
+                </div>
+                <div class="col">
+                    <div class="image-cover image--sub">
+                        <img class="image" src="images/lake-112059_1920.jpg" alt="lake">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer footer--dark">
+        <div class="container">
+            <div class="footer__container">
+                <div class="row">
+                    <div class="col">
+                        <a href="#" class="logo logo--footer">
+                            <img src="images/logo-white.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <p class="footer__column__title">Меню</p>
+                        <div class="nav nav--vertical">
+                            <a href="index.html#promotions" class="nav__link nav__link--simple">Акции</a>
+                            <a href="index.html#search" class="nav__link nav__link--simple">Поиск</a>
+                            <a href="index.html#about" class="nav__link nav__link--simple">О нас</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <p class="footer__column__title">Информация</p>
+                        <div class="nav nav--vertical">
+                            <a href="#" class="nav__link nav__link--simple">Контакты</a>
+                            <a href="#" class="nav__link nav__link--simple">Пользовательское соглашение</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3>8 (800) 555-33-10</h3>
+                        <p>г.Томск, ул.Герцена, 18</p>
+                    </div>
+                </div>
+                <div class="footer__container__rule">
+                    &copy; Турист-про 2021 - Все права защищены
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Скрипт для скрытия загрузчика после загрузки страницы -->
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            loader.classList.add('hidden');
+            setTimeout(() => { loader.style.display = 'none'; }, 500); // Задержка для анимации
+        });
+    </script>
+</body>
+</html>

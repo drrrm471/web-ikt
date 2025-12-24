@@ -1,0 +1,38 @@
+.footer{
+    padding-bottom: 35px;
+    margin-top: auto;
+}
+
+.footer--dark{
+    background: #292929;
+}
+
+.footer--dark *{
+    color: #fff;
+}
+
+.footer--dark .footer__container,
+.footer--dark .footer__container__rule{
+    border-color: #fff;
+}
+
+.footer__container{
+    padding-top: 35px;
+    border-top: solid 3px #404040;
+}
+
+.logo--footer{
+    width: 250px;
+}
+
+.footer__container__rule{
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: solid 1px #404040;
+}
+
+@media all and (max-width: 1024px) {
+    .footer .col{
+        margin: 10px 0;
+    }
+}

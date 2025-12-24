@@ -1,0 +1,240 @@
+@import "bs.css";
+@import "components/nav.css";
+@import "components/header.css";
+@import "components/footer.css";
+@import "components/icons.css";
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  box-sizing: border-box;
+  color: #292929;
+}
+
+.page{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .section:first-of-type{
+    padding-top: 25px;
+}
+
+.section{
+    padding: 75px 0;
+}
+
+.section--light{
+    background: #fbfbfb;
+    border-top: solid 1px #7e7e7e;
+}
+
+.section--dark{
+    background: #292929;
+}
+
+.section--dark *{
+    color: #fff;
+}
+
+.image-cover{
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.image{
+    transition: all .25s ease;
+    width: 100%;
+    filter: grayscale(100%);
+}
+
+.image--card{
+    margin: 0;
+}
+
+.image:hover{
+    transform: scale(1.1);
+    filter: none;
+}
+
+.wrap--reviews{
+    padding: 50px 0;
+}
+
+.wrap--reviews .col:first-of-type{
+    border-right: #7e7e7e solid 1px;
+}
+
+.wrap--quote{ position: relative; margin: 0 30px; }
+
+.wrap--quote::before,
+.wrap--quote::after{
+    content: "\0022";
+    font-size: 50px;
+    position: absolute;
+}
+
+.wrap--quote::before{ top: 0; left: 0; }
+.wrap--quote::after{ right: 0; bottom: -25px; }
+
+.wrap--search{
+    padding: 0 50px;
+}
+
+.booking_steps__item{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+.booking_steps__item p{
+    margin: 0;
+    margin-left: 20px;
+}
+
+.booking_steps__item > img{
+    margin: 0;
+    padding-left: 10px;
+}
+
+.promotion__container{
+    margin-top: 50px;
+}
+
+.promotion__card:last-of-type{
+    height: 100%;
+}
+
+.promotion__card{
+    padding: 25px;
+}
+
+.form--sub{
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.search__container{
+    width: 100%;
+    padding: 50px 0;
+}
+
+.search__card{
+    margin: 10px 0;
+    padding: 20px;
+    display: flex;
+}
+
+.search__card:hover{
+    background: #f6f6f6;
+}
+
+.search__card__image{
+    width: 350px;
+}
+
+.difficult-hard{
+    color: #cf5757;
+}
+
+.difficult-medium{
+    color: #ffd55c;
+}
+
+.difficult-easy{
+    color: #36a92f;
+}
+
+.wrap--order_info{
+    border: solid 1px #404040;
+}
+
+.order_info__header,
+.order_info__content{
+    padding: 15px 20px;
+}
+
+.order_info__header{
+    border-bottom: solid 1px #404040;
+}
+
+.location__card{
+    display: flex;
+    margin: 25px 0;
+}
+
+.location__card--sm{
+    align-items: center;
+    margin: 10px 0;
+}
+
+.location__container--lg{
+    margin-bottom: 50px;
+}
+
+.location__container--lg .location__card .location__card__image{
+    height: 250px;
+    /*width: 250px;*/
+}
+
+.location__container--lg .location__card .location__card__image img{
+    height: 100%;
+    width: auto;
+}
+
+.location__card--sm .location__card__image{
+    width: 100px;
+}
+
+@media all and (max-width: 600px) {
+    .search__card{
+        flex-direction: column;
+    }
+    .search__card__image{
+        height: auto;
+        width: 100%;
+    }
+    .search__card__image img{
+        height: auto;
+        width: 100%;
+    }
+    .search__card__content{
+        padding: 25px 0;
+        margin-left: 0;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .image--sub{
+        display: none;
+    }
+    .wrap--reviews .row{
+        padding: 0 20px;
+        margin: 0;
+    }
+    .wrap--reviews .col{
+        padding: 20px 0;
+    }
+    .wrap--reviews .col:first-of-type{
+        border-right: none;
+        border-bottom: solid 1px #404040;
+        text-align: center;
+    }
+    .search__card__image{
+        height: 250px;
+    }
+    .search__card__image img{
+        height: 100%;
+        width: auto;
+    }
+    .search__card__content{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search__card__content__right{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
