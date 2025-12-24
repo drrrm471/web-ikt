@@ -27,10 +27,10 @@
 
 ### 📁 Лабораторная работа №4 (lab-04). Family year
 - Макеты: [creative/](lab-04/project/media/creative/)
-- Задание: [task](lab-04/tasks/ЛР4%20по%20ИКТ.docx)
+- Задание: [task](lab-04/tasks/)
 - Сайт: [project/](lab-04/project/)
 
 ### 📁 Лабораторная работа №5 (lab-05). Eco-market
 - Макеты: [creative/](lab-05/project/assets/creative/)
-- Задание: [task](lab-05/tasks/ЛР5%20по%20ИКТ.docx)
+- Задание: [task](lab-05/tasks/)
 - Сайт: [project/](lab-05/project/)
