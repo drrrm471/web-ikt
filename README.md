@@ -34,3 +34,9 @@
 - Макеты: [creative/](lab-05/project/assets/creative/)
 - Задание: [task](lab-05/tasks/)
 - Сайт: [project/](lab-05/project/)
+
+
+### 📁 Лабораторная работа №6 (lab-06). Index drive
+- Макеты: [creative/](lab-06/project/creative/)
+- Задание: [task](lab-06/task/)
+- Сайт: [project/](lab-06/project/)
