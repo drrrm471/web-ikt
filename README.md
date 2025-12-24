@@ -40,3 +40,9 @@
 - Макеты: [creative/](lab-06/project/creative/)
 - Задание: [task](lab-06/task/)
 - Сайт: [project/](lab-06/project/)
+
+
+### 📁 Лабораторная работа №7 (lab-07). Auto doctor
+- Макеты: [creative/](lab-07/project/creative/)
+- Задание: [task](lab-07/task/)
+- Сайт: [project/](lab-07/project/)
