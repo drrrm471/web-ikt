@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - АвтоДоктор</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index-dark.html">
+                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                        <g class="logo-car">
+                            <circle cx="25" cy="38" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="75" cy="38" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M 15 38 L 20 20 Q 30 15 60 15 Q 90 15 100 20 L 85 38" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <rect x="25" y="22" width="12" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                            <rect x="63" y="22" width="12" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                        </g>
+                        <path d="M 40 8 Q 60 2 85 8" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                    </svg>
+                    <span>АвтоДоктор</span>
+                </a>
+            </div>
+
+            <nav class="header__nav">
+                <div class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle">Сервис</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Выхлопная система</a></li>
+                        <li><a href="#">Двигатель</a></li>
+                        <li><a href="#">Диагностика автомобиля</a></li>
+                        <li><a href="#">Замена жидкостей</a></li>
+                        <li><a href="#">Кондиционеры и отопление</a></li>
+                        <li><a href="#">Кузовной ремонт и покраска</a></li>
+                        <li><a href="#">Подвеска</a></li>
+                        <li><a href="#">Рулевое управление</a></li>
+                    </ul>
+                </div>
+                <a href="feedback.html" class="nav-link">Рекомендации</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="#" class="nav-link">Магазин</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+            </nav>
+
+            <div class="header__actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск..." class="search-input">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle">☀️</button>
+                <a href="index-dark.html" class="btn btn--secondary" style="padding: 8px 16px;">Выход</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <section class="lk-section">
+        <div class="container">
+            <div class="lk-alert">
+                <p>ℹ️ Для участия в наших акциях и спецпредложениях, пожалуйста, заполните всю информацию в личном кабинете</p>
+            </div>
+
+            <!-- User Info Block -->
+            <div class="lk-block">
+                <h2>Информация о клиенте</h2>
+                <form class="lk-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Фамилия</label>
+                            <input type="text" placeholder="Ваша фамилия">
+                        </div>
+                        <div class="form-group">
+                            <label>Имя</label>
+                            <input type="text" placeholder="Ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <label>Отчество</label>
+                            <input type="text" placeholder="Ваше отчество">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Дата рождения</label>
+                            <input type="date">
+                        </div>
+                        <div class="form-group">
+                            <label>Город проживания</label>
+                            <input type="text" placeholder="Ваш город">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Телефон</label>
+                            <input type="tel" placeholder="+7 (___) ___-__-__">
+                        </div>
+                        <div class="form-group">
+                            <label>Электронная почта</label>
+                            <input type="email" placeholder="your@email.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Установить пароль</label>
+                            <input type="password" placeholder="Новый пароль">
+                        </div>
+                        <div class="form-group">
+                            <label>Повторить пароль</label>
+                            <input type="password" placeholder="Повторите пароль">
+                        </div>
+                    </div>
+
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span>Я согласен на обработку персональных данных</span>
+                    </label>
+
+                    <button type="submit" class="btn btn--primary">Обновить данные пользователя</button>
+                </form>
+            </div>
+
+            <!-- Vehicles Block -->
+            <div class="lk-block">
+                <h2>Информация о транспортных средствах</h2>
+                <div class="vehicles-list">
+                    <div class="vehicle-card">
+                        <div class="vehicle-info">
+                            <h3>Toyota Camry</h3>
+                            <p><strong>VIN:</strong> JTDKF24K062052318</p>
+                            <p><strong>Регистрационный номер:</strong> А123БВ77</p>
+                            <p><strong>Год выпуска:</strong> 2019</p>
+                        </div>
+                        <div class="vehicle-image">
+                            <img src="img/car1.png" alt="🚗">
+                        </div>
+                    </div>
+
+                    <div class="vehicle-card">
+                        <div class="vehicle-info">
+                            <h3>BMW 5 Series</h3>
+                            <p><strong>VIN:</strong> WBADT43462G296706</p>
+                            <p><strong>Регистрационный номер:</strong> А456ВГ77</p>
+                            <p><strong>Год выпуска:</strong> 2020</p>
+                        </div>
+                        <div class="vehicle-image">
+                            <img src="img/car2.png" alt="🚗">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn--secondary">+ Добавить автомобиль</button>
+            </div>
+
+            <!-- Repair History Block -->
+            <div class="lk-block">
+                <h2>История ремонта автомобилей</h2>
+                <div class="repairs-table">
+                    <div class="repair-row repair-header">
+                        <div>Марка/Модель</div>
+                        <div>VIN</div>
+                        <div>Услуга</div>
+                        <div>Дата</div>
+                        <div>Стоимость</div>
+                    </div>
+
+                    <div class="repair-row">
+                        <div>Toyota Camry</div>
+                        <div>JTDKF24K062052318</div>
+                        <div>Техническое обслуживание</div>
+                        <div>15.11.2024</div>
+                        <div>3 500 ₽</div>
+                    </div>
+
+                    <div class="repair-row">
+                        <div>Toyota Camry</div>
+                        <div>JTDKF24K062052318</div>
+                        <div>Замена масла</div>
+                        <div>10.09.2024</div>
+                        <div>1 500 ₽</div>
+                    </div>
+
+                    <div class="repair-row">
+                        <div>BMW 5 Series</div>
+                        <div>WBADT43462G296706</div>
+                        <div>Диагностика двигателя</div>
+                        <div>05.08.2024</div>
+                        <div>2 000 ₽</div>
+                    </div>
+
+                    <div class="repair-row">
+                        <div>BMW 5 Series</div>
+                        <div>WBADT43462G296706</div>
+                        <div>Ремонт кондиционера</div>
+                        <div>20.07.2024</div>
+                        <div>5 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>О нас</h4>
+                    <p>Автосервис предоставляет надежные услуги по техническому обслуживанию автомобилей всех размеров и производителей с 2002 года</p>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="VK">В</a>
+                        <a href="#" title="Twitter">𝕏</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="#">Часто задаваемые вопросы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="repair.html">Услуги и цены</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Конфиденциальность</a></li>
+                        <li><a href="#">Ресурсы</a></li>
+                        <li><a href="#">Карта сайта</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Свяжитесь с нами</h4>
+                    <p>Email: <a href="mailto:info@doc-auto.ru">info@doc-auto.ru</a></p>
+                    <p>Телефон: (415) 347-3160</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Подписка на рассылку</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn btn--primary">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 АвтоДоктор. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            this.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+        });
+
+        document.querySelectorAll('.dropdown-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                this.closest('.dropdown').classList.toggle('open');
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+            }
+        });
+    </script>
+
+    <style>
+        .lk-section {
+            padding: var(--spacing-xl) var(--spacing-md);
+            background-color: var(--color-bg);
+            min-height: 60vh;
+        }
+
+        .lk-alert {
+            background-color: rgba(52, 152, 219, 0.15);
+            border-left: 4px solid var(--color-secondary);
+            padding: var(--spacing-md);
+            border-radius: var(--radius);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .lk-alert p {
+            color: var(--color-text);
+            margin: 0;
+        }
+
+        .lk-block {
+            background-color: var(--color-bg-light);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .lk-block h2 {
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.5rem;
+        }
+
+        .lk-form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .vehicles-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .vehicle-card {
+            background-color: var(--color-bg);
+            padding: var(--spacing-md);
+            border-radius: var(--radius);
+            border: 1px solid var(--color-border);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: var(--spacing-md);
+            align-items: center;
+        }
+
+        .vehicle-info h3 {
+            color: var(--color-primary);
+            margin: 0 0 var(--spacing-sm) 0;
+        }
+
+        .vehicle-info p {
+            color: var(--color-text);
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .vehicle-image {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .repairs-table {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .repair-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr;
+            gap: var(--spacing-md);
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .repair-row:last-child {
+            border-bottom: none;
+        }
+
+        .repair-header {
+            background-color: var(--color-bg);
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .repair-row div {
+            color: var(--color-text);
+            word-break: break-word;
+        }
+
+        @media (max-width: 1024px) {
+            .repair-row {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .repair-row div:nth-child(n+3) {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .repair-row,
+            .repair-header {
+                grid-template-columns: 1fr;
+            }
+
+            .repair-row div:nth-child(n+3) {
+                grid-column: auto;
+            }
+
+            .vehicles-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

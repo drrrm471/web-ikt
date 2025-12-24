@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - АвтоДоктор</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index-dark.html">
+                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                        <g class="logo-car">
+                            <circle cx="25" cy="38" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="75" cy="38" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M 15 38 L 20 20 Q 30 15 60 15 Q 90 15 100 20 L 85 38" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <rect x="25" y="22" width="12" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                            <rect x="63" y="22" width="12" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                        </g>
+                        <path d="M 40 8 Q 60 2 85 8" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                    </svg>
+                    <span>АвтоДоктор</span>
+                </a>
+            </div>
+
+            <nav class="header__nav">
+                <div class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle">Сервис</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Выхлопная система</a></li>
+                        <li><a href="#">Двигатель</a></li>
+                        <li><a href="#">Диагностика автомобиля</a></li>
+                        <li><a href="#">Замена жидкостей</a></li>
+                        <li><a href="#">Кондиционеры и отопление</a></li>
+                        <li><a href="#">Кузовной ремонт и покраска</a></li>
+                        <li><a href="#">Подвеска</a></li>
+                        <li><a href="#">Рулевое управление</a></li>
+                    </ul>
+                </div>
+                <a href="feedback.html" class="nav-link">Рекомендации</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="#" class="nav-link">Магазин</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+            </nav>
+
+            <div class="header__actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск..." class="search-input">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle">☀️</button>
+                <button class="header__lk-btn">Личный кабинет</button>
+            </div>
+        </div>
+
+        <div class="login-form-container" id="loginForm">
+            <form class="login-form">
+                <h3>Вход в личный кабинет</h3>
+                <input type="tel" placeholder="Телефон" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit" class="btn btn--primary">Войти</button>
+                <a href="lk.html" class="login-form__link">Перейти в кабинет</a>
+            </form>
+        </div>
+    </header>
+
+    <!-- History Section -->
+    <section class="about-section history">
+        <div class="container">
+            <h1>Наша история</h1>
+            <div class="history-content">
+                <div class="history-image">
+                    <img src="img/about.png" alt="о нас">
+                </div>
+                <div class="history-text">
+                    <h2>Мы работаем с 2002 года</h2>
+                    <p>Когда 24 года назад 3 механика собрались вместе, они решили, что их любовь к автомобилям может открыть им новую сферу деятельности! С тех пор Авторемонтная мастерская отремонтировала тысячи новых и ретро автомобилей...</p>
+                    <p>За этот длительный период мы увеличили нашу команду всего с 3 механиков до более чем 200 человек. Кроме того, теперь у нас есть сильная база постоянных клиентов, которым мы всегда выражаем признательность дополнительными бонусами и скидками на будущие услуги!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differences Section -->
+    <section class="about-section differences">
+        <div class="container">
+            <h2>Чем мы отличаемся от других</h2>
+            <div class="differences-grid">
+                <div class="difference-card">
+                    <div class="difference-icon">👥</div>
+                    <h3>Клиентоориентированный сервис</h3>
+                    <p>Мы ценим оказанное нам доверие, и наши постоянные клиенты, которые возвращаются к нам снова и снова, всегда могут рассчитывать на некоторую благодарность от нас, например, скидку на будущие услуги или подарок.</p>
+                </div>
+
+                <div class="difference-card">
+                    <div class="difference-icon">🏆</div>
+                    <h3>Опытная команда</h3>
+                    <p>Когда дело доходит до ремонта или технического осмотра вашей автомеханики или электроники, вся наша команда, вместе взятая, обладает почти столетним практическим опытом.</p>
+                </div>
+
+                <div class="difference-card">
+                    <div class="difference-icon">💰</div>
+                    <h3>Доступные цены</h3>
+                    <p>Мы стремимся сделать наши услуги максимально доступными. Именно поэтому мы сокращаем все основные коммерческие расходы.</p>
+                </div>
+
+                <div class="difference-card">
+                    <div class="difference-icon">⚙️</div>
+                    <h3>Высококачественные автомобильные запчасти</h3>
+                    <p>Все автомобильные запчасти, имеющиеся у нас на складе, были приобретены у самых надежных дилеров и производителей.</p>
+                </div>
+
+                <div class="difference-card">
+                    <div class="difference-icon">🔧</div>
+                    <h3>Современное оборудование</h3>
+                    <p>Мы инвестируем в самое современное диагностическое и ремонтное оборудование, чтобы предоставить вам лучшие услуги.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h2>ПОЛУЧИТЕ СКИДКУ В размере 10% НА УКАЗАННЫЕ НИЖЕ УСЛУГИ!</h2>
+                <ul class="promo-list">
+                    <li>✓ Плановое техническое обслуживание от производителя</li>
+                    <li>✓ Настройка и ремонт двигателя</li>
+                    <li>✓ Замена жидкостей</li>
+                </ul>
+                <a href="index-dark.html" class="btn btn--primary btn--lg">Записаться</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>О нас</h4>
+                    <p>Автосервис предоставляет надежные услуги по техническому обслуживанию автомобилей всех размеров и производителей с 2002 года</p>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="VK">В</a>
+                        <a href="#" title="Twitter">𝕏</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="#">Часто задаваемые вопросы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="repair.html">Услуги и цены</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Конфиденциальность</a></li>
+                        <li><a href="#">Ресурсы</a></li>
+                        <li><a href="#">Карта сайта</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Свяжитесь с нами</h4>
+                    <p>Email: <a href="mailto:info@doc-auto.ru">info@doc-auto.ru</a></p>
+                    <p>Телефон: (415) 347-3160</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Подписка на рассылку</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn btn--primary">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 АвтоДоктор. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            this.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+        });
+
+        document.querySelectorAll('.dropdown-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                this.closest('.dropdown').classList.toggle('open');
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+            }
+        });
+
+        document.querySelector('.header__lk-btn').addEventListener('click', function() {
+            document.getElementById('loginForm').classList.toggle('show');
+        });
+    </script>
+
+    <style>
+        .about-section {
+            padding: var(--spacing-xl) var(--spacing-md);
+        }
+
+        .about-section h1 {
+            font-size: 2.2rem;
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-primary);
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-primary);
+        }
+
+        .history {
+            background-color: var(--color-bg);
+        }
+
+        .history-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .history-image {
+            width: 100%;
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .history-image svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .history-text p {
+            color: var(--color-text);
+            line-height: 1.8;
+            margin-bottom: var(--spacing-md);
+            font-size: 1rem;
+        }
+
+        .differences {
+            background-color: var(--color-bg-light);
+        }
+
+        .differences-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .difference-card {
+            background-color: var(--color-bg);
+            padding: var(--spacing-md);
+            border-radius: var(--radius);
+            border-top: 3px solid var(--color-primary);
+            text-align: center;
+        }
+
+        .difference-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .difference-card h3 {
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+        }
+
+        .difference-card p {
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .promo-banner {
+            background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), rgba(52, 152, 219, 0.1));
+            padding: var(--spacing-xl) var(--spacing-md);
+            border: 2px solid var(--color-primary);
+            margin: var(--spacing-xl) auto;
+        }
+
+        .banner-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .banner-content h2 {
+            font-size: 1.6rem;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-lg);
+            text-transform: uppercase;
+        }
+
+        .promo-list {
+            list-style: none;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .promo-list li {
+            color: var(--color-text);
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        @media (max-width: 768px) {
+            .history-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-section h1 {
+                font-size: 1.5rem;
+            }
+
+            .banner-content h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</body>
+</html>

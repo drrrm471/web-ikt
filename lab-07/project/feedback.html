@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рекомендации - АвтоДоктор</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index-dark.html">
+                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                        <g class="logo-car">
+                            <circle cx="25" cy="38" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="75" cy="38" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M 15 38 L 20 20 Q 30 15 60 15 Q 90 15 100 20 L 85 38" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <rect x="25" y="22" width="12" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                            <rect x="63" y="22" width="12" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                        </g>
+                        <path d="M 40 8 Q 60 2 85 8" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                    </svg>
+                    <span>АвтоДоктор</span>
+                </a>
+            </div>
+
+            <nav class="header__nav">
+                <div class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle">Сервис</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Выхлопная система</a></li>
+                        <li><a href="#">Двигатель</a></li>
+                        <li><a href="#">Диагностика автомобиля</a></li>
+                        <li><a href="#">Замена жидкостей</a></li>
+                        <li><a href="#">Кондиционеры и отопление</a></li>
+                        <li><a href="#">Кузовной ремонт и покраска</a></li>
+                        <li><a href="#">Подвеска</a></li>
+                        <li><a href="#">Рулевое управление</a></li>
+                    </ul>
+                </div>
+                <a href="feedback.html" class="nav-link">Рекомендации</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="#" class="nav-link">Магазин</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+            </nav>
+
+            <div class="header__actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск..." class="search-input">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle">☀️</button>
+                <button class="header__lk-btn">Личный кабинет</button>
+            </div>
+        </div>
+
+        <div class="login-form-container" id="loginForm">
+            <form class="login-form">
+                <h3>Вход в личный кабинет</h3>
+                <input type="tel" placeholder="Телефон" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit" class="btn btn--primary">Войти</button>
+                <a href="lk.html" class="login-form__link">Перейти в кабинет</a>
+            </form>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Рекомендации наших клиентов</h1>
+            <p>Отзывы и рекомендации людей, которые доверили нам свои автомобили</p>
+        </div>
+    </section>
+
+    <!-- Feedback Grid -->
+    <section class="feedback-section">
+        <div class="container">
+            <div class="feedback-grid">
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        <div class="feedback-avatar">👤</div>
+                        <div>
+                            <h3>Иван Петров</h3>
+                            <p>Москва</p>
+                        </div>
+                    </div>
+                    <p class="feedback-text">"Отличный сервис! Механики очень профессиональны и вежливы. Мой автомобиль отремонтирован качественно и в срок. Буду рекомендовать друзьям!"</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        <div class="feedback-avatar">👤</div>
+                        <div>
+                            <h3>Мария Сидорова</h3>
+                            <p>Санкт-Петербург</p>
+                        </div>
+                    </div>
+                    <p class="feedback-text">"Рекомендую всем друзьям. Цены справедливые, работа выполнена на высоком уровне. Спасибо за отличное обслуживание!"</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        <div class="feedback-avatar">👤</div>
+                        <div>
+                            <h3>Александр Иванов</h3>
+                            <p>Казань</p>
+                        </div>
+                    </div>
+                    <p class="feedback-text">"Привез автомобиль со сложной проблемой. Ребята быстро разобрались и решили все вопросы. Очень благодарен!"</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        <div class="feedback-avatar">👤</div>
+                        <div>
+                            <h3>Елена Смирнова</h3>
+                            <p>Казань</p>
+                        </div>
+                    </div>
+                    <p class="feedback-text">"Сервис работает ответственно. Обслужил мой автомобиль очень качественно. Диагностика произведена на современном оборудовании. Спасибо!"</p>
+                    <div class="rating">⭐⭐⭐⭐</div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        <div class="feedback-avatar">👤</div>
+                        <div>
+                            <h3>Дмитрий Федоров</h3>
+                            <p>Новосибирск</p>
+                        </div>
+                    </div>
+                    <p class="feedback-text">"Были проблемы с коробкой передач. Специалисты сумели найти истинную причину неполадки и устранили её. Отличная диагностика!"</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        <div class="feedback-avatar">👤</div>
+                        <div>
+                            <h3>Ольга Новикова</h3>
+                            <p>Екатеринбург</p>
+                        </div>
+                    </div>
+                    <p class="feedback-text">"Очень доволен обслуживанием. Механики проделали отличную работу по замене тормозных колодок. Быстро, качественно и по справедливой цене!"</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>О нас</h4>
+                    <p>Автосервис предоставляет надежные услуги по техническому обслуживанию автомобилей всех размеров и производителей с 2002 года</p>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="VK">В</a>
+                        <a href="#" title="Twitter">𝕏</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="#">Часто задаваемые вопросы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="repair.html">Услуги и цены</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Конфиденциальность</a></li>
+                        <li><a href="#">Ресурсы</a></li>
+                        <li><a href="#">Карта сайта</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Свяжитесь с нами</h4>
+                    <p>Email: <a href="mailto:info@doc-auto.ru">info@doc-auto.ru</a></p>
+                    <p>Телефон: (415) 347-3160</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Подписка на рассылку</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn btn--primary">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 АвтоДоктор. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            this.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+        });
+
+        document.querySelectorAll('.dropdown-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                this.closest('.dropdown').classList.toggle('open');
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+            }
+        });
+
+        document.querySelector('.header__lk-btn').addEventListener('click', function() {
+            document.getElementById('loginForm').classList.toggle('show');
+        });
+    </script>
+
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+            padding: var(--spacing-xl) var(--spacing-md);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .page-header p {
+            color: var(--color-text);
+            font-size: 1.1rem;
+        }
+
+        .feedback-section {
+            padding: var(--spacing-xl) var(--spacing-md);
+            background-color: var(--color-bg);
+        }
+
+        .feedback-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .feedback-card {
+            background-color: var(--color-bg-light);
+            padding: var(--spacing-md);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--color-primary);
+            transition: var(--transition);
+        }
+
+        .feedback-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .feedback-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .feedback-avatar {
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-primary);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .feedback-header h3 {
+            margin: 0;
+            color: var(--color-text);
+            font-size: 1.1rem;
+        }
+
+        .feedback-header p {
+            margin: 0;
+            color: var(--color-secondary);
+            font-size: 0.9rem;
+        }
+
+        .feedback-text {
+            color: var(--color-text);
+            line-height: 1.8;
+            margin-bottom: var(--spacing-md);
+            font-style: italic;
+        }
+
+        .rating {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .feedback-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

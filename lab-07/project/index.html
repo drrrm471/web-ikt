@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АвтоДоктор - Сервис по ремонту автомобилей</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index.html">
+                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                        <!-- Автомобиль -->
+                        <g class="logo-car">
+                            <circle cx="25" cy="38" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="75" cy="38" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <!-- Кузов -->
+                            <path d="M 15 38 L 20 20 Q 30 15 60 15 Q 90 15 100 20 L 85 38" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Окна -->
+                            <rect x="25" y="22" width="12" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                            <rect x="63" y="22" width="12" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                        </g>
+                        <!-- Стетоскоп вокруг -->
+                        <path d="M 40 8 Q 60 2 85 8" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                    </svg>
+                    <span>АвтоДоктор</span>
+                </a>
+            </div>
+
+            <nav class="header__nav">
+                <div class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle">Сервис</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Выхлопная система</a></li>
+                        <li><a href="#">Двигатель</a></li>
+                        <li><a href="#">Диагностика автомобиля</a></li>
+                        <li><a href="#">Замена жидкостей</a></li>
+                        <li><a href="#">Кондиционеры и отопление</a></li>
+                        <li><a href="#">Кузовной ремонт и покраска</a></li>
+                        <li><a href="#">Подвеска</a></li>
+                        <li><a href="#">Рулевое управление</a></li>
+                    </ul>
+                </div>
+                <a href="feedback.html" class="nav-link">Рекомендации</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="repair.html" class="nav-link">Магазин</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+            </nav>
+
+            <div class="header__actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск..." class="search-input">
+                    <button class="search-btn">🔍</button>
+                </div>
+
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+
+                <div class="login-modal-trigger">
+                    <button class="header__lk-btn">Личный кабинет</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Login Modal -->
+        <div class="login-form-container" id="loginForm">
+            <form class="login-form">
+                <h3>Вход в личный кабинет</h3>
+                <input type="tel" placeholder="Телефон" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit" class="btn btn--primary">Войти</button>
+                <a href="lk.html" class="login-form__link">Перейти в кабинет</a>
+            </form>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="banner__content">
+            <h1 class="banner__slogan">Ваш автомобиль — наша забота</h1>
+            <div class="banner__promo">
+                <p>Бесплатная замена масла с 15 марта. Только при наличии цифры "5" на вашем номерном знаке</p>
+            </div>
+            <a href="#booking" class="btn btn--primary btn--lg">Записаться</a>
+        </div>
+        <div class="banner__image">
+            <img src="img/banner.png" alt="баннер">
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>🎁 Наши преимущества</h3>
+                <ul>
+                    <li>Бесплатная диагностика и проверка тормозов</li>
+                    <li>Сертифицированные услуги по ремонту</li>
+                    <li>Оценка ремонта по справедливой цене</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>⏰ Часы работы</h3>
+                <ul>
+                    <li><strong>Будни:</strong> 05:00 – 22:00</li>
+                    <li><strong>Суббота:</strong> 10:00 – 20:00</li>
+                    <li><strong>Воскресенье:</strong> 10:00 – 18:00</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>📞 Связаться с нами</h3>
+                <ul>
+                    <li>Телефон: (415) 347-3160</li>
+                    <li>Мобильный: 02 562-958</li>
+                    <li>Факс: 02 562-95</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <h2>Запись на сервис</h2>
+            <form class="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Марка</label>
+                        <input type="text" placeholder="Например, Toyota" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Модель</label>
+                        <input type="text" placeholder="Например, Camry" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Город</label>
+                        <input type="text" placeholder="Ваш город" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Имя</label>
+                        <input type="text" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Телефон</label>
+                        <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Желаемая дата</label>
+                        <input type="date" required>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Неисправность автомобиля</label>
+                    <textarea placeholder="Опишите проблему вашего автомобиля..." rows="4"></textarea>
+                </div>
+
+                <label class="checkbox">
+                    <input type="checkbox" required>
+                    <span>Я согласен на обработку персональных данных</span>
+                </label>
+
+                <button type="submit" class="btn btn--primary btn--lg">Записаться</button>
+
+                <div class="booking-info">
+                    <p><strong>После подачи заявки</strong> с Вами свяжется менеджер для уточнения деталей. В течении нескольких минут Вам поступит СМС-сообщение с временным паролем от личного кабинета. Установить пароль Вы сможете в личном кабинете.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Услуги по ремонту транспортных средств</h2>
+            
+            <div class="services-content">
+                <div class="services-text">
+                    <p>Мы являемся одной из ведущих автомастерских, обслуживающих клиентов по всему региону. Все ремонтные услуги выполняются высококвалифицированными механиками</p>
+                </div>
+
+                <div class="services-icons">
+                    <div class="service-icon">
+                        <div class="icon-placeholder">⚙️</div>
+                        <p>Техническое обслуживание</p>
+                    </div>
+                    <div class="service-icon">
+                        <div class="icon-placeholder">🔧</div>
+                        <p>Ремонт двигателя</p>
+                    </div>
+                    <div class="service-icon">
+                        <div class="icon-placeholder">🛠️</div>
+                        <p>Диагностика</p>
+                    </div>
+                    <div class="service-icon">
+                        <div class="icon-placeholder">🎨</div>
+                        <p>Покраска и кузовной ремонт</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="repair.html" class="btn btn--primary">Все услуги</a>
+        </div>
+    </section>
+
+    <!-- About Section with Slider -->
+    <section class="about-home">
+        <div class="container">
+            <h2>О нас</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Мы работаем с 2002 года</h3>
+                    <p>Мы предлагаем полный спектр услуг владельцам транспортных средств. Наши профессионалы знают, как справиться с широким спектром ремонта авто. Наши механики позаботятся о том, чтобы Ваш автомобиль работал наилучшим образом еще до того, как покинет нашу ремонтную мастерскую. Мы знаем, как ухаживать за Вашим автомобилем</p>
+                    <a href="repair.html" class="btn btn--secondary">Все услуги</a>
+                </div>
+
+                <div class="reviews-slider">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">👤</div>
+                            <div>
+                                <p class="review-name">Иван Петров</p>
+                                <p class="review-city">Москва</p>
+                            </div>
+                        </div>
+                        <p class="review-text">"Отличный сервис! Механики очень профессиональны и вежливы. Мой автомобиль отремонтирован качественно и в срок."</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">👤</div>
+                            <div>
+                                <p class="review-name">Мария Сидорова</p>
+                                <p class="review-city">Санкт-Петербург</p>
+                            </div>
+                        </div>
+                        <p class="review-text">"Рекомендую всем друзьям. Цены справедливые, работа выполнена на высоком уровне. Спасибо за отличное обслуживание!"</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">👤</div>
+                            <div>
+                                <p class="review-name">Александр Иванов</p>
+                                <p class="review-city">Казань</p>
+                            </div>
+                        </div>
+                        <p class="review-text">"Привез автомобиль со сложной проблемой. Ребята быстро разобрались и решили все вопросы. Очень благодарен!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2>Популярные товары</h2>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/product1.png" alt="🛢️">
+                    </div>
+                    <h3>Синтетическое масло 5W-40</h3>
+                    <p class="product-price">1 500 ₽</p>
+                    <button class="btn btn--secondary">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/product2.png" alt="🔩">
+                    </div>
+                    <h3>Масляный фильтр</h3>
+                    <p class="product-price">350 ₽</p>
+                    <button class="btn btn--secondary">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/product3.png" alt="⚡">
+                    </div>
+                    <h3>Аккумулятор 12V 60Ah</h3>
+                    <p class="product-price">3 500 ₽</p>
+                    <button class="btn btn--secondary">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/product4.png" alt="🧴">
+                    </div>
+                    <h3>Охлаждающая жидкость</h3>
+                    <p class="product-price">800 ₽</p>
+                    <button class="btn btn--secondary">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/product5.png" alt="🛣️">
+                    </div>
+                    <h3>Тормозная жидкость DOT 4</h3>
+                    <p class="product-price">450 ₽</p>
+                    <button class="btn btn--secondary">В корзину</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/product6.png" alt="🔌">
+                    </div>
+                    <h3>Свечи зажигания NGK</h3>
+                    <p class="product-price">600 ₽</p>
+                    <button class="btn btn--secondary">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Наши мастерские</h2>
+            <div class="map-placeholder">
+                <img src="img/map.png" alt="карта">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>О нас</h4>
+                    <p>Автосервис предоставляет надежные услуги по техническому обслуживанию автомобилей всех размеров и производителей с 2002 года</p>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="VK">В</a>
+                        <a href="#" title="Twitter">𝕏</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="#">Часто задаваемые вопросы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="repair.html">Услуги и цены</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Конфиденциальность</a></li>
+                        <li><a href="#">Ресурсы</a></li>
+                        <li><a href="#">Карта сайта</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Свяжитесь с нами</h4>
+                    <p>Email: <a href="mailto:info@doc-auto.ru">info@doc-auto.ru</a></p>
+                    <p>Телефон: (415) 347-3160</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Подписка на рассылку</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn btn--primary">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 АвтоДоктор. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeToggle.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+        });
+
+        // Initialize theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', savedTheme);
+        themeToggle.textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+
+        // Dropdown menu
+        document.querySelectorAll('.dropdown-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                this.closest('.dropdown').classList.toggle('open');
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+            }
+        });
+
+        // Login form
+        document.querySelector('.header__lk-btn').addEventListener('click', function() {
+            document.getElementById('loginForm').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

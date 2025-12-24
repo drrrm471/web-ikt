@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Страница не найдена - АвтоДоктор</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index-dark.html">
+                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                        <g class="logo-car">
+                            <circle cx="25" cy="38" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="75" cy="38" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M 15 38 L 20 20 Q 30 15 60 15 Q 90 15 100 20 L 85 38" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <rect x="25" y="22" width="12" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                            <rect x="63" y="22" width="12" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                        </g>
+                        <path d="M 40 8 Q 60 2 85 8" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                    </svg>
+                    <span>АвтоДоктор</span>
+                </a>
+            </div>
+
+            <nav class="header__nav">
+                <div class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle">Сервис</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Выхлопная система</a></li>
+                        <li><a href="#">Двигатель</a></li>
+                        <li><a href="#">Диагностика автомобиля</a></li>
+                        <li><a href="#">Замена жидкостей</a></li>
+                        <li><a href="#">Кондиционеры и отопление</a></li>
+                        <li><a href="#">Кузовной ремонт и покраска</a></li>
+                        <li><a href="#">Подвеска</a></li>
+                        <li><a href="#">Рулевое управление</a></li>
+                    </ul>
+                </div>
+                <a href="feedback.html" class="nav-link">Рекомендации</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="#" class="nav-link">Магазин</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+            </nav>
+
+            <div class="header__actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск..." class="search-input">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle">☀️</button>
+                <button class="header__lk-btn">Личный кабинет</button>
+            </div>
+        </div>
+
+        <div class="login-form-container" id="loginForm">
+            <form class="login-form">
+                <h3>Вход в личный кабинет</h3>
+                <input type="tel" placeholder="Телефон" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit" class="btn btn--primary">Войти</button>
+                <a href="lk.html" class="login-form__link">Перейти в кабинет</a>
+            </form>
+        </div>
+    </header>
+
+    <!-- 404 Content -->
+    <section class="error-page">
+        <div class="container">
+            <div class="error-content">
+                <div class="error-icon">🚗</div>
+                <h1 class="error-code">404</h1>
+                <h2>Страница не найдена</h2>
+                <p>Извините, страница, которую вы ищите, не существует или была перемещена. Возможно, вы неправильно ввели адрес в адресной строке браузера.</p>
+                
+                <div class="error-suggestions">
+                    <h3>Попробуйте перейти на:</h3>
+                    <ul>
+                        <li><a href="index-dark.html">Главная страница</a></li>
+                        <li><a href="repair.html">Услуги ремонта</a></li>
+                        <li><a href="feedback.html">Рекомендации</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <a href="index-dark.html" class="btn btn--primary btn--lg">Вернуться на главную</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>О нас</h4>
+                    <p>Автосервис предоставляет надежные услуги по техническому обслуживанию автомобилей всех размеров и производителей с 2002 года</p>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="VK">В</a>
+                        <a href="#" title="Twitter">𝕏</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="#">Часто задаваемые вопросы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="repair.html">Услуги и цены</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Конфиденциальность</a></li>
+                        <li><a href="#">Ресурсы</a></li>
+                        <li><a href="#">Карта сайта</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Свяжитесь с нами</h4>
+                    <p>Email: <a href="mailto:info@doc-auto.ru">info@doc-auto.ru</a></p>
+                    <p>Телефон: (415) 347-3160</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Подписка на рассылку</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn btn--primary">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 АвтоДоктор. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            this.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+        });
+
+        document.querySelectorAll('.dropdown-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                this.closest('.dropdown').classList.toggle('open');
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+            }
+        });
+
+        document.querySelector('.header__lk-btn').addEventListener('click', function() {
+            document.getElementById('loginForm').classList.toggle('show');
+        });
+    </script>
+
+    <style>
+        .error-page {
+            padding: var(--spacing-xl) var(--spacing-md);
+            background-color: var(--color-bg);
+            min-height: calc(100vh - 200px);
+            display: flex;
+            align-items: center;
+        }
+
+        .error-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .error-icon {
+            font-size: 4rem;
+            margin-bottom: var(--spacing-lg);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .error-code {
+            font-size: 5rem;
+            font-weight: bold;
+            color: var(--color-primary);
+            margin: 0 0 var(--spacing-md) 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .error-page h2 {
+            font-size: 2rem;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .error-page p {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.8;
+        }
+
+        .error-suggestions {
+            background-color: var(--color-bg-light);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--color-secondary);
+            margin-bottom: var(--spacing-lg);
+            text-align: left;
+        }
+
+        .error-suggestions h3 {
+            color: var(--color-primary);
+            margin-top: 0;
+        }
+
+        .error-suggestions ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+        }
+
+        .error-suggestions li a {
+            color: var(--color-secondary);
+            text-decoration: none;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius);
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .error-suggestions li a:hover {
+            background-color: var(--color-border);
+            color: var(--color-primary);
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 3rem;
+            }
+
+            .error-page h2 {
+                font-size: 1.5rem;
+            }
+
+            .error-suggestions ul {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

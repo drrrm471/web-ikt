@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги ремонта - АвтоДоктор</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index-dark.html">
+                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                        <g class="logo-car">
+                            <circle cx="25" cy="38" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="75" cy="38" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M 15 38 L 20 20 Q 30 15 60 15 Q 90 15 100 20 L 85 38" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <rect x="25" y="22" width="12" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                            <rect x="63" y="22" width="12" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                        </g>
+                        <path d="M 40 8 Q 60 2 85 8" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                    </svg>
+                    <span>АвтоДоктор</span>
+                </a>
+            </div>
+
+            <nav class="header__nav">
+                <div class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle">Сервис</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Выхлопная система</a></li>
+                        <li><a href="#">Двигатель</a></li>
+                        <li><a href="#">Диагностика автомобиля</a></li>
+                        <li><a href="#">Замена жидкостей</a></li>
+                        <li><a href="#">Кондиционеры и отопление</a></li>
+                        <li><a href="#">Кузовной ремонт и покраска</a></li>
+                        <li><a href="#">Подвеска</a></li>
+                        <li><a href="#">Рулевое управление</a></li>
+                    </ul>
+                </div>
+                <a href="feedback.html" class="nav-link">Рекомендации</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="#" class="nav-link">Магазин</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+            </nav>
+
+            <div class="header__actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Поиск..." class="search-input">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle">☀️</button>
+                <button class="header__lk-btn">Личный кабинет</button>
+            </div>
+        </div>
+
+        <div class="login-form-container" id="loginForm">
+            <form class="login-form">
+                <h3>Вход в личный кабинет</h3>
+                <input type="tel" placeholder="Телефон" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit" class="btn btn--primary">Войти</button>
+                <a href="lk.html" class="login-form__link">Перейти в кабинет</a>
+            </form>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Услуги по ремонту</h1>
+            <p>Полный спектр услуг по обслуживанию и ремонту автомобилей</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-page">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-card__image">⚙️</div>
+                    <h3>Техническое обслуживание</h3>
+                    <p>Полная диагностика и техническое обслуживание Вашего автомобиля с использованием современного оборудования</p>
+                    <button class="btn btn--secondary">Узнать больше</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__image">🔧</div>
+                    <h3>Ремонт двигателя</h3>
+                    <p>Профессиональный ремонт и диагностика двигателей любых автомобилей. Работа с высокой точностью и качеством</p>
+                    <button class="btn btn--secondary">Узнать больше</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__image">🛠️</div>
+                    <h3>Диагностика автомобиля</h3>
+                    <p>Компьютерная диагностика автомобиля выявит все проблемы и неисправности. Быстро и точно</p>
+                    <button class="btn btn--secondary">Узнать больше</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__image">🎨</div>
+                    <h3>Кузовной ремонт и покраска</h3>
+                    <p>Профессиональный кузовной ремонт, выравнивание и покраска с использованием оригинальных лакокрасочных материалов</p>
+                    <button class="btn btn--secondary">Узнать больше</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__image">💧</div>
+                    <h3>Замена жидкостей</h3>
+                    <p>Замена масла, охлаждающей жидкости, тормозной жидкости и других расходных жидкостей с использованием оригинальных материалов</p>
+                    <button class="btn btn--secondary">Узнать больше</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-card__image">❄️</div>
+                    <h3>Кондиционеры и отопление</h3>
+                    <p>Обслуживание и ремонт систем кондиционирования и отопления автомобиля. Заправка хладагентом</p>
+                    <button class="btn btn--secondary">Узнать больше</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>О нас</h4>
+                    <p>Автосервис предоставляет надежные услуги по техническому обслуживанию автомобилей всех размеров и производителей с 2002 года</p>
+                    <div class="social-icons">
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="VK">В</a>
+                        <a href="#" title="Twitter">𝕏</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="#">Часто задаваемые вопросы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="repair.html">Услуги и цены</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Конфиденциальность</a></li>
+                        <li><a href="#">Ресурсы</a></li>
+                        <li><a href="#">Карта сайта</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Свяжитесь с нами</h4>
+                    <p>Email: <a href="mailto:info@doc-auto.ru">info@doc-auto.ru</a></p>
+                    <p>Телефон: (415) 347-3160</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Подписка на рассылку</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn btn--primary">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 АвтоДоктор. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            this.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+        });
+
+        document.querySelectorAll('.dropdown-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                this.closest('.dropdown').classList.toggle('open');
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+            }
+        });
+
+        document.querySelector('.header__lk-btn').addEventListener('click', function() {
+            document.getElementById('loginForm').classList.toggle('show');
+        });
+    </script>
+
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+            padding: var(--spacing-xl) var(--spacing-md);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .page-header p {
+            color: var(--color-text);
+            font-size: 1.1rem;
+        }
+
+        .services-page {
+            padding: var(--spacing-xl) var(--spacing-md);
+            background-color: var(--color-bg);
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .service-card {
+            background-color: var(--color-bg-light);
+            padding: var(--spacing-md);
+            border-radius: var(--radius);
+            border-top: 3px solid var(--color-primary);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card__image {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+            text-align: center;
+        }
+
+        .service-card h3 {
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.2rem;
+        }
+
+        .service-card p {
+            color: var(--color-text);
+            flex-grow: 1;
+            margin-bottom: var(--spacing-md);
+            line-height: 1.6;
+        }
+
+        .service-card .btn {
+            align-self: flex-start;
+        }
+
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
