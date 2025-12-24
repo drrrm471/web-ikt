@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Индекс Драйв</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="Индекс Драйв">
+                    <span>Индекс Драйв</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="booking.html" class="nav-link">Бронирование</a>
+                    <a href="history.html" class="nav-link">История</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="profile-page">
+        <div class="container">
+            <div class="profile-grid">
+                <!-- Информация о пользователе -->
+                <section class="profile-info">
+                    <h1>Личный кабинет</h1>
+                    <div class="user-card">
+                        <div class="user-header">
+                            <div class="user-avatar">
+                                <span>ИИ</span>
+                            </div>
+                            <div class="user-details">
+                                <h2>Иван Иванович Иванов</h2>
+                                <p class="user-phone">+7 (999) 999-99-99</p>
+                            </div>
+                        </div>
+
+                        <div class="user-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Баллы лояльности</span>
+                                <span class="stat-value">1,250</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Количество бронирований</span>
+                                <span class="stat-value">12</span>
+                            </div>
+                        </div>
+
+                        <div class="user-actions">
+                            <a href="cards.html" class="btn btn-secondary">Банковские карты</a>
+                            <button class="btn btn-danger">Выход</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Активные бронирования -->
+                <section class="active-bookings">
+                    <h2>Активные бронирования</h2>
+                    
+                    <div class="booking-item">
+                        <div class="booking-image">
+                            <img src="img/car-preview.png" alt="Toyota Camry">
+                        </div>
+                        <div class="booking-details">
+                            <div class="booking-header">
+                                <h3>Toyota Camry</h3>
+                                <span class="booking-id">ID: CAR001</span>
+                            </div>
+                            <p class="booking-description">Премиум седан с полным оснащением и комфортом</p>
+                            <div class="booking-dates">
+                                <div class="date-item">
+                                    <span class="label">От:</span>
+                                    <span class="value">15 декабря 2025</span>
+                                </div>
+                                <div class="date-item">
+                                    <span class="label">До:</span>
+                                    <span class="value">18 декабря 2025</span>
+                                </div>
+                            </div>
+                            <p class="booking-branch">Филиал: ул. Пушкина, 25</p>
+                            <a href="booking.html" class="btn btn-secondary">Продлить</a>
+                        </div>
+                    </div>
+
+                    <div class="booking-item">
+                        <div class="booking-image">
+                            <img src="img/car-preview2.png" alt="Hyundai Solaris">
+                        </div>
+                        <div class="booking-details">
+                            <div class="booking-header">
+                                <h3>Hyundai Solaris</h3>
+                                <span class="booking-id">ID: CAR002</span>
+                            </div>
+                            <p class="booking-description">Компактный городской автомобиль</p>
+                            <div class="booking-dates">
+                                <div class="date-item">
+                                    <span class="label">От:</span>
+                                    <span class="value">20 декабря 2025</span>
+                                </div>
+                                <div class="date-item">
+                                    <span class="label">До:</span>
+                                    <span class="value">25 декабря 2025</span>
+                                </div>
+                            </div>
+                            <p class="booking-branch">Филиал: пр. Ленина, 50</p>
+                            <a href="booking.html" class="btn btn-secondary">Продлить</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p class="footer-phone">☎ 8 (800) 111-11-11</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Навигация</h3>
+                    <nav class="footer-nav">
+                        <a href="index.html">Главная</a>
+                        <a href="booking.html">Бронирование</a>
+                        <a href="branches.html">Филиалы</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Индекс Драйв. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Индекс Драйв</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="Индекс Драйв">
+                    <span>Индекс Драйв</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="booking.html" class="nav-link">Бронирование</a>
+                    <a href="login.html" class="nav-link">Вход</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="auth-page">
+        <div class="auth-container">
+            <div class="auth-box">
+                <h1>Регистрация</h1>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Иван"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname">Фамилия</label>
+                        <input 
+                            type="text" 
+                            id="lastname" 
+                            name="lastname" 
+                            placeholder="Иванов"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="patronymic">Отчество</label>
+                        <input 
+                            type="text" 
+                            id="patronymic" 
+                            name="patronymic" 
+                            placeholder="Иванович"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passport">Паспортные данные</label>
+                        <input 
+                            type="text" 
+                            id="passport" 
+                            name="passport" 
+                            placeholder="1234 567890"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-phone">Номер телефона</label>
+                        <input 
+                            type="tel" 
+                            id="reg-phone" 
+                            name="phone" 
+                            placeholder="+7 (999) 999-99-99"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthdate">Дата рождения</label>
+                        <input 
+                            type="date" 
+                            id="birthdate" 
+                            name="birthdate"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-password">Пароль</label>
+                        <input 
+                            type="password" 
+                            id="reg-password" 
+                            name="password" 
+                            placeholder="Минимум 6 символов"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Повтор пароля</label>
+                        <input 
+                            type="password" 
+                            id="confirm-password" 
+                            name="confirm_password" 
+                            placeholder="Повторите пароль"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Зарегистрироваться</button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Уже есть аккаунт? <a href="login.html">Войти</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p class="footer-phone">☎ 8 (800) 111-11-11</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Навигация</h3>
+                    <nav class="footer-nav">
+                        <a href="index.html">Главная</a>
+                        <a href="booking.html">Бронирование</a>
+                        <a href="branches.html">Филиалы</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Индекс Драйв. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

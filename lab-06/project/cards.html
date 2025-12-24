@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Банковские карты - Индекс Драйв</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="Индекс Драйв">
+                    <span>Индекс Драйв</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="profile.html" class="nav-link">Личный кабинет</a>
+                    <a href="booking.html" class="nav-link">Бронирование</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="cards-page">
+        <div class="container">
+            <div class="cards-header">
+                <h1>Мои банковские карты</h1>
+                <button class="btn btn-primary" id="addCardBtn">Добавить карту</button>
+            </div>
+
+            <div class="cards-grid">
+                <!-- Карта 1 -->
+                <div class="card-item">
+                    <div class="card-display">
+                        <div class="card-type visa">VISA</div>
+                        <p class="card-number">**** **** **** 1234</p>
+                        <div class="card-footer">
+                            <span class="card-holder">Иван Иванов</span>
+                            <span class="card-expiry">12/26</span>
+                        </div>
+                    </div>
+                    <div class="card-status">
+                        <span class="status-badge active">Активна</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-sm">Удалить</button>
+                    </div>
+                </div>
+
+                <!-- Карта 2 -->
+                <div class="card-item">
+                    <div class="card-display">
+                        <div class="card-type mastercard">MASTERCARD</div>
+                        <p class="card-number">**** **** **** 5678</p>
+                        <div class="card-footer">
+                            <span class="card-holder">Иван Иванов</span>
+                            <span class="card-expiry">08/25</span>
+                        </div>
+                    </div>
+                    <div class="card-status">
+                        <span class="status-badge expired">Истекла</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-sm">Удалить</button>
+                    </div>
+                </div>
+
+                <!-- Карта 3 -->
+                <div class="card-item">
+                    <div class="card-display">
+                        <div class="card-type mir">МИР</div>
+                        <p class="card-number">**** **** **** 9012</p>
+                        <div class="card-footer">
+                            <span class="card-holder">Иван Иванов</span>
+                            <span class="card-expiry">03/27</span>
+                        </div>
+                    </div>
+                    <div class="card-status">
+                        <span class="status-badge active">Активна</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-secondary btn-sm">Удалить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно добавления карты -->
+    <div class="modal hidden" id="addCardModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Добавить банковскую карту</h2>
+                <button class="modal-close" id="closeModalBtn">&times;</button>
+            </div>
+
+            <form class="modal-form" id="cardForm">
+                <div class="form-group">
+                    <label for="cardNumber">Номер карты</label>
+                    <input 
+                        type="text" 
+                        id="cardNumber" 
+                        name="card_number" 
+                        placeholder="1234 5678 9012 3456"
+                        maxlength="19"
+                        pattern="[0-9\s]+"
+                        required
+                    >
+                    <small>16 цифр, разделённых пробелом по 4 символа</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="cardHolder">Имя и фамилия держателя</label>
+                    <input 
+                        type="text" 
+                        id="cardHolder" 
+                        name="card_holder" 
+                        placeholder="Ivan Ivanov"
+                        pattern="[A-Za-z\s]+"
+                        required
+                    >
+                    <small>На латинице</small>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cardExpiry">Дата окончания</label>
+                        <input 
+                            type="text" 
+                            id="cardExpiry" 
+                            name="card_expiry" 
+                            placeholder="MM/YY"
+                            pattern="\d{2}/\d{2}"
+                            maxlength="5"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardCVV">CVV/CVC код</label>
+                        <input 
+                            type="text" 
+                            id="cardCVV" 
+                            name="card_cvv" 
+                            placeholder="123"
+                            pattern="\d{3}"
+                            maxlength="3"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Добавить карту</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p class="footer-phone">☎ 8 (800) 111-11-11</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Навигация</h3>
+                    <nav class="footer-nav">
+                        <a href="index.html">Главная</a>
+                        <a href="profile.html">Личный кабинет</a>
+                        <a href="booking.html">Бронирование</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Индекс Драйв. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .modal.hidden {
+            display: none;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            position: relative;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group small {
+            display: block;
+            color: #999;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+
+    <script>
+        const addCardBtn = document.getElementById('addCardBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const addCardModal = document.getElementById('addCardModal');
+        const cardForm = document.getElementById('cardForm');
+        const modalOverlay = addCardModal.querySelector('.modal-overlay');
+
+        // Открытие модального окна
+        addCardBtn.addEventListener('click', () => {
+            addCardModal.classList.remove('hidden');
+        });
+
+        // Закрытие модального окна
+        closeModalBtn.addEventListener('click', () => {
+            addCardModal.classList.add('hidden');
+        });
+
+        // Закрытие при клике на оверлей
+        modalOverlay.addEventListener('click', () => {
+            addCardModal.classList.add('hidden');
+        });
+
+        // Обработка формы
+        cardForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const cardNumber = document.getElementById('cardNumber').value;
+            const cardHolder = document.getElementById('cardHolder').value;
+            const cardExpiry = document.getElementById('cardExpiry').value;
+            
+            // Форматирование номера карты для отображения
+            const lastFourDigits = cardNumber.replace(/\s/g, '').slice(-4);
+            const displayNumber = `**** **** **** ${lastFourDigits}`;
+            
+            // Определение типа карты по первым цифрам
+            const firstDigits = cardNumber.replace(/\s/g, '').slice(0, 4);
+            let cardType = 'CARD';
+            let cardTypeClass = '';
+            
+            if (firstDigits === '1111') {
+                cardType = 'VISA';
+                cardTypeClass = 'visa';
+            } else if (firstDigits === '2222') {
+                cardType = 'MASTERCARD';
+                cardTypeClass = 'mastercard';
+            } else if (firstDigits === '3333') {
+                cardType = 'МИР';
+                cardTypeClass = 'mir';
+            }
+            
+            // Создание новой карты
+            const newCard = document.createElement('div');
+            newCard.className = 'card-item';
+            newCard.innerHTML = `
+                <div class="card-display">
+                    <div class="card-type ${cardTypeClass}">${cardType}</div>
+                    <p class="card-number">${displayNumber}</p>
+                    <div class="card-footer">
+                        <span class="card-holder">${cardHolder}</span>
+                        <span class="card-expiry">${cardExpiry}</span>
+                    </div>
+                </div>
+                <div class="card-status">
+                    <span class="status-badge active">Активна</span>
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-secondary btn-sm">Удалить</button>
+                </div>
+            `;
+            
+            // Добавление карты в сетку
+            const cardsGrid = document.querySelector('.cards-grid');
+            cardsGrid.appendChild(newCard);
+            
+            // Закрытие модального окна и очистка формы
+            addCardModal.classList.add('hidden');
+            cardForm.reset();
+        });
+
+        // Форматирование номера карты при вводе
+        const cardNumberInput = document.getElementById('cardNumber');
+        cardNumberInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\s/g, '');
+            let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+            e.target.value = formattedValue;
+        });
+    </script>
+</body>
+</html>

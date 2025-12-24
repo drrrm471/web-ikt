@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование - Индекс Драйв</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="Индекс Драйв">
+                    <span>Индекс Драйв</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="profile.html" class="nav-link">Личный кабинет</a>
+                    <a href="history.html" class="nav-link">История</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="booking-page">
+        <div class="container">
+            <h1>Бронирование автомобиля</h1>
+            
+            <div class="booking-grid">
+                <!-- Левая колонка - Форма -->
+                <div class="booking-form-section">
+                    <form class="booking-form">
+                        <!-- Информация об автомобиле -->
+                        <fieldset>
+                            <legend>Информация об автомобиле</legend>
+                            
+                            <div class="form-group">
+                                <label for="car-id">Идентификатор машины</label>
+                                <input type="text" id="car-id" name="car_id" placeholder="CAR001" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="car-brand">Марка авто</label>
+                                <input type="text" id="car-brand" name="car_brand" placeholder="Toyota" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="car-name">Название авто</label>
+                                <input type="text" id="car-name" name="car_name" placeholder="Camry" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="car-number">Номер машины</label>
+                                <input type="text" id="car-number" name="car_number" placeholder="А123БВ77" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="start-date">Дата бронирования</label>
+                                <input type="date" id="start-date" name="start_date" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="end-date">Дата возврата</label>
+                                <input type="date" id="end-date" name="end_date" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="daily-cost">Стоимость бронирования за день</label>
+                                <input type="number" id="daily-cost" name="daily_cost" placeholder="5000" min="0" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="branch">Филиал</label>
+                                <select id="branch" name="branch" required>
+                                    <option value="">Выберите филиал</option>
+                                    <option value="branch1">ул. Пушкина, 25</option>
+                                    <option value="branch2">пр. Ленина, 50</option>
+                                    <option value="branch3">ул. Кирова, 30</option>
+                                    <option value="branch4">пр. Комсомольский, 100</option>
+                                    <option value="branch5">ул. Октябрьская, 15</option>
+                                </select>
+                            </div>
+                        </fieldset>
+
+                        <!-- Информация о клиенте -->
+                        <fieldset>
+                            <legend>Информация о клиенте</legend>
+                            
+                            <div class="form-group">
+                                <label for="client-name">Имя</label>
+                                <input type="text" id="client-name" name="client_name" placeholder="Иван" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="client-lastname">Фамилия</label>
+                                <input type="text" id="client-lastname" name="client_lastname" placeholder="Иванов" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="client-patronymic">Отчество</label>
+                                <input type="text" id="client-patronymic" name="client_patronymic" placeholder="Иванович" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="client-phone">Номер телефона</label>
+                                <input type="tel" id="client-phone" name="client_phone" placeholder="+7 (999) 999-99-99" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="passport-data">Паспортные данные</label>
+                                <input type="text" id="passport-data" name="passport_data" placeholder="1234 567890" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="card">Банковская карта</label>
+                                <select id="card" name="card" required>
+                                    <option value="">Выберите карту</option>
+                                    <option value="card1">**** **** **** 1234</option>
+                                    <option value="card2">**** **** **** 5678</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="birthdate">Дата рождения</label>
+                                <input type="date" id="birthdate" name="birthdate" required>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Забронировать автомобиль</button>
+                            <button type="button" class="btn btn-secondary">Добавить ещё один автомобиль</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Правая колонка - Расчёт стоимости -->
+                <div class="booking-summary">
+                    <div class="summary-card">
+                        <h2>Расчёт стоимости</h2>
+                        
+                        <div class="summary-item">
+                            <span class="label">Количество дней:</span>
+                            <span class="value">3</span>
+                        </div>
+
+                        <div class="summary-item">
+                            <span class="label">Стоимость в день:</span>
+                            <span class="value">5,000 ₽</span>
+                        </div>
+
+                        <div class="summary-item">
+                            <span class="label">Базовая стоимость:</span>
+                            <span class="value">15,000 ₽</span>
+                        </div>
+
+                        <div class="discount-section">
+                            <h3>Скидка по системе</h3>
+                            <div class="discount-items">
+                                <div class="discount-item">
+                                    <span class="discount-label">3+ дня</span>
+                                    <span class="discount-percent">5%</span>
+                                </div>
+                                <div class="discount-item active">
+                                    <span class="discount-label">6+ дней</span>
+                                    <span class="discount-percent">10%</span>
+                                </div>
+                                <div class="discount-item">
+                                    <span class="discount-label">9+ дней</span>
+                                    <span class="discount-percent">15%</span>
+                                </div>
+                                <div class="discount-item">
+                                    <span class="discount-label">12+ дней</span>
+                                    <span class="discount-percent">20%</span>
+                                </div>
+                                <div class="discount-item">
+                                    <span class="discount-label">15+ дней</span>
+                                    <span class="discount-percent">25%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="summary-item discount-applied">
+                            <span class="label">Скидка (5%):</span>
+                            <span class="value">-750 ₽</span>
+                        </div>
+
+                        <div class="summary-total">
+                            <span class="label">Итого:</span>
+                            <span class="value">14,250 ₽</span>
+                        </div>
+
+                        <button class="btn btn-primary btn-full">Оформить бронирование</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p class="footer-phone">☎ 8 (800) 111-11-11</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Навигация</h3>
+                    <nav class="footer-nav">
+                        <a href="index.html">Главная</a>
+                        <a href="profile.html">Личный кабинет</a>
+                        <a href="branches.html">Филиалы</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Индекс Драйв. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

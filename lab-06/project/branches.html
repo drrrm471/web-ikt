@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Филиалы - Индекс Драйв</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="Индекс Драйв">
+                    <span>Индекс Драйв</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="booking.html" class="nav-link">Бронирование</a>
+                    <a href="profile.html" class="nav-link">Личный кабинет</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="branches-page">
+        <div class="container">
+            <h1>Наши филиалы</h1>
+            
+            <div class="branches-grid">
+                <!-- Филиал 1 -->
+                <div class="branch-card">
+                    <div class="branch-header">
+                        <h2>Филиал 1</h2>
+                        <p class="branch-address">ул. Пушкина, 25</p>
+                    </div>
+
+                    <div class="branch-info">
+                        <p><strong>Время работы:</strong> 08:00 - 22:00</p>
+                        <p><strong>Телефон:</strong> +7 (999) 111-11-11</p>
+                    </div>
+
+                    <button class="btn btn-secondary branch-toggle" data-branch="branch1">Показать автомобили</button>
+
+                    <div class="branch-vehicles hidden" id="branch1">
+                        <h3>Доступные автомобили</h3>
+                        <div class="vehicles-list">
+                            <div class="vehicle-item">
+                                <img src="img/car1.png" alt="Toyota Camry">
+                                <div class="vehicle-info">
+                                    <h4>Toyota Camry</h4>
+                                    <p class="vehicle-class">Премиум</p>
+                                    <p class="vehicle-price">5,000 ₽/день</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-item">
+                                <img src="img/car2.png" alt="Hyundai Solaris">
+                                <div class="vehicle-info">
+                                    <h4>Hyundai Solaris</h4>
+                                    <p class="vehicle-class">Эконом</p>
+                                    <p class="vehicle-price">3,000 ₽/день</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-item">
+                                <img src="img/car3.png" alt="Audi A4">
+                                <div class="vehicle-info">
+                                    <h4>Audi A4</h4>
+                                    <p class="vehicle-class">Премиум</p>
+                                    <p class="vehicle-price">6,500 ₽/день</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Филиал 2 -->
+                <div class="branch-card">
+                    <div class="branch-header">
+                        <h2>Филиал 2</h2>
+                        <p class="branch-address">пр. Ленина, 50</p>
+                    </div>
+
+                    <div class="branch-info">
+                        <p><strong>Время работы:</strong> 08:00 - 22:00</p>
+                        <p><strong>Телефон:</strong> +7 (999) 222-22-22</p>
+                    </div>
+
+                    <button class="btn btn-secondary branch-toggle" data-branch="branch2">Показать автомобили</button>
+
+                    <div class="branch-vehicles hidden" id="branch2">
+                        <h3>Доступные автомобили</h3>
+                        <div class="vehicles-list">
+                            <div class="vehicle-item">
+                                <img src="img/car4.png" alt="BMW X5">
+                                <div class="vehicle-info">
+                                    <h4>BMW X5</h4>
+                                    <p class="vehicle-class">Премиум</p>
+                                    <p class="vehicle-price">8,000 ₽/день</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-item">
+                                <img src="img/car5.png" alt="Kia Ceed">
+                                <div class="vehicle-info">
+                                    <h4>Kia Ceed</h4>
+                                    <p class="vehicle-class">Эконом</p>
+                                    <p class="vehicle-price">3,500 ₽/день</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-item">
+                                <img src="img/car6.png" alt="Mercedes C-Class">
+                                <div class="vehicle-info">
+                                    <h4>Mercedes C-Class</h4>
+                                    <p class="vehicle-class">Премиум</p>
+                                    <p class="vehicle-price">7,500 ₽/день</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Филиал 3 -->
+                <div class="branch-card">
+                    <div class="branch-header">
+                        <h2>Филиал 3</h2>
+                        <p class="branch-address">ул. Кирова, 30</p>
+                    </div>
+
+                    <div class="branch-info">
+                        <p><strong>Время работы:</strong> 09:00 - 21:00</p>
+                        <p><strong>Телефон:</strong> +7 (999) 333-33-33</p>
+                    </div>
+
+                    <button class="btn btn-secondary branch-toggle" data-branch="branch3">Показать автомобили</button>
+
+                    <div class="branch-vehicles hidden" id="branch3">
+                        <h3>Доступные автомобили</h3>
+                        <div class="vehicles-list">
+                            <div class="vehicle-item">
+                                <img src="img/car7.png" alt="Volkswagen Passat">
+                                <div class="vehicle-info">
+                                    <h4>Volkswagen Passat</h4>
+                                    <p class="vehicle-class">Премиум</p>
+                                    <p class="vehicle-price">5,500 ₽/день</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-item">
+                                <img src="img/car8.png" alt="Skoda Octavia">
+                                <div class="vehicle-info">
+                                    <h4>Skoda Octavia</h4>
+                                    <p class="vehicle-class">Эконом</p>
+                                    <p class="vehicle-price">3,200 ₽/день</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-item">
+                                <img src="img/car9.png" alt="Lexus RX">
+                                <div class="vehicle-info">
+                                    <h4>Lexus RX</h4>
+                                    <p class="vehicle-class">Премиум</p>
+                                    <p class="vehicle-price">7,000 ₽/день</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Филиал 4 -->
+                <div class="branch-card">
+                    <div class="branch-header">
+                        <h2>Филиал 4</h2>
+                        <p class="branch-address">пр. Комсомольский, 100</p>
+                    </div>
+
+                    <div class="branch-info">
+                        <p><strong>Время работы:</strong> 08:00 - 23:00</p>
+                        <p><strong>Телефон:</strong> +7 (999) 444-44-44</p>
+                    </div>
+
+                    <button class="btn btn-secondary branch-toggle" data-branch="branch4">Показать автомобили</button>
+
+                    <div class="branch-vehicles hidden" id="branch4">
+                        <h3>Доступные автомобили</h3>
+                        <div class="vehicles-list">
+                            <div class="vehicle-item">
+                                <img src="img/car10.png" alt="Mazda 6">
+                                <div class="vehicle-info">
+                                    <h4>Mazda 6</h4>
+                                    <p class="vehicle-class">Премиум</p>
+                                    <p class="vehicle-price">5,200 ₽/день</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-item">
+                                <img src="img/car11.png" alt="Chevrolet Aveo">
+                                <div class="vehicle-info">
+                                    <h4>Chevrolet Aveo</h4>
+                                    <p class="vehicle-class">Эконом</p>
+                                    <p class="vehicle-price">2,800 ₽/день</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-item">
+                                <img src="img/car12.png" alt="Porsche 911">
+                                <div class="vehicle-info">
+                                    <h4>Porsche 911</h4>
+                                    <p class="vehicle-class">Премиум</p>
+                                    <p class="vehicle-price">10,000 ₽/день</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Филиал 5 -->
+                <div class="branch-card">
+                    <div class="branch-header">
+                        <h2>Филиал 5</h2>
+                        <p class="branch-address">ул. Октябрьская, 15</p>
+                    </div>
+
+                    <div class="branch-info">
+                        <p><strong>Время работы:</strong> 07:00 - 23:00</p>
+                        <p><strong>Телефон:</strong> +7 (999) 555-55-55</p>
+                    </div>
+
+                    <button class="btn btn-secondary branch-toggle" data-branch="branch5">Показать автомобили</button>
+
+                    <div class="branch-vehicles hidden" id="branch5">
+                        <h3>Доступные автомобили</h3>
+                        <div class="vehicles-list">
+                            <div class="vehicle-item">
+                                <img src="img/car13.png" alt="Tesla Model 3">
+                                <div class="vehicle-info">
+                                    <h4>Tesla Model 3</h4>
+                                    <p class="vehicle-class">Премиум</p>
+                                    <p class="vehicle-price">6,000 ₽/день</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-item">
+                                <img src="img/car14.png" alt="Renault Sandero">
+                                <div class="vehicle-info">
+                                    <h4>Renault Sandero</h4>
+                                    <p class="vehicle-class">Эконом</p>
+                                    <p class="vehicle-price">3,100 ₽/день</p>
+                                </div>
+                            </div>
+                            <div class="vehicle-item">
+                                <img src="img/car15.png" alt="Range Rover">
+                                <div class="vehicle-info">
+                                    <h4>Range Rover</h4>
+                                    <p class="vehicle-class">Премиум</p>
+                                    <p class="vehicle-price">9,000 ₽/день</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p class="footer-phone">☎ 8 (800) 111-11-11</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Навигация</h3>
+                    <nav class="footer-nav">
+                        <a href="index.html">Главная</a>
+                        <a href="booking.html">Бронирование</a>
+                        <a href="profile.html">Личный кабинет</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Индекс Драйв. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .branch-vehicles.hidden {
+            display: none;
+        }
+    </style>
+
+    <script>
+        // Обработка кликов на кнопки филиалов
+        const branchToggles = document.querySelectorAll('.branch-toggle');
+        
+        branchToggles.forEach(button => {
+            button.addEventListener('click', function() {
+                const branchId = this.getAttribute('data-branch');
+                const vehiclesDiv = document.getElementById(branchId);
+                
+                vehiclesDiv.classList.toggle('hidden');
+                
+                if (vehiclesDiv.classList.contains('hidden')) {
+                    this.textContent = 'Показать автомобили';
+                } else {
+                    this.textContent = 'Скрыть автомобили';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
